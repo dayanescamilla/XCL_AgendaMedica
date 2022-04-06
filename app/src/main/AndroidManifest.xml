@@ -11,7 +11,8 @@
         android:theme="@style/Theme.XCL_AgendaMedica">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
