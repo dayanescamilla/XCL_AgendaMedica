@@ -3,16 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_btn_1.xml" value="0.1655" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_cjt_1.xml" value="0.1655" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_1.xml" value="0.1655" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_2.xml" value="0.1655" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_3.xml" value="0.1655" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_btn_1.xml" value="0.1945" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_btn_2.xml" value="0.1945" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_cjt_1.xml" value="0.1945" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/splashscreen.xml" value="0.167" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_1.xml" value="0.1945" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_2.xml" value="0.1945" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_modulo_registro.xml" value="0.2" />
+        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

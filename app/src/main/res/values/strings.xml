@@ -12,6 +12,7 @@
     <string name="m2_txt1">Ingresar correo electrónico</string>
     <string name="m2_cjt1">Correo</string>
     <string name="m2_txt2">Ingresar contraseña</string>
+    <string name="m2_cjt2">Contraseña</string>
     <string name="m2_txt3">¿Olvidaste tu contraseña?</string>
     <string name="m2_btn1">Iniciar sesión</string>
     <string name="m2_btn2">Registrarse</string>
