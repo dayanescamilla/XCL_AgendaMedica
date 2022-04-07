@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
     <color name="Transparente">#A8FFFFFF</color>
+    <color name="Rojo">#A8FF0000</color>
 
 
 </resources>
