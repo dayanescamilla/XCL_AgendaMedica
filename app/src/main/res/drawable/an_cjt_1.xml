@@ -5,6 +5,12 @@
             <corners android:radius="25sp"/> <!-- Bordes -->
             <solid android:color="@color/white"/> <!-- Color -->
             <padding android:top="15dp" android:bottom="15dp" android:left="15dp" android:right="15dp"/>
+
+            <stroke
+                android:color="@color/RoyalBlue"
+                android:width="2dp"
+                />
+
         </shape>
     </item>
 </selector>
