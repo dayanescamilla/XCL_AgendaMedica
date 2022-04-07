@@ -13,10 +13,10 @@
             android:name=".modulo_registro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" > <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
