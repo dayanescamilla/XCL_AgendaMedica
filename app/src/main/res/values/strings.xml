@@ -1,6 +1,89 @@
 <resources>
     <string name="app_name">Agenda Médica</string> <!-- Nombre de la aplicación móvil -->
 
-    <string name="Titulo1">XCL_AgendaMedica</string>
+    <!-- 1.Modulo pantalla de Bienvenida -->
+    <string name="m1_tit1">Bienvenido</string>
+    <string name="m1_sub1">Agenda tu cita médica desde tu smartphone sin ningún costo.</string>
+    <string name="m1_btn1">Comenzar</string>
+
+    <!-- 2.Modulo de login -->
+    <string name="m2_tit1">Iniciar Sesión</string>
+    <string name="m2_sub1">Para poder continuar necesitas iniciar sesión.</string>
+    <string name="m2_txt1">Ingresar correo electrónico</string>
+    <string name="m2_txt2">Ingresar contraseña</string>
+    <string name="m2_txt3">¿Olvidaste tu contraseña?</string>
+    <string name="m2_btn1">Iniciar sesión</string>
+    <string name="m2_btn2">Registrarse</string>
+    <string name="m2_txt4">Google</string>
+    <string name="m2_btn3">Iniciar sesión con Google</string>
+
+    <!-- 3.Modulo de registro -->
+    <string name="m3_tit1">Registrarse</string>
+    <string name="m3_sub1">Registra tus datos solicitados para brindar nuestros servicios.</string>
+    <string name="m3_txt1">Ingresar nombre completo</string>
+    <string name="m3_txt2">Ingresar correo electrónico</string>
+    <string name="m3_txt3">Ingresar contraseña</string>
+    <string name="m3_txt4">Soy mayor de 18 años y acepto los términos y condiciones</string>
+    <string name="m3_btn1">Registrarse</string>
+
+    <!-- 4.Modulo de menu principal -->
+    <string name="m4_tit1">Hola,</string>
+    <string name="m4_sub1">Bienvenido</string>
+    <string name="m4_txt1">Agendar cita</string>
+    <string name="m4_txt2">Ayuda</string>
+    <string name="m4_txt3">Acerca de</string>
+    <string name="m4_txt4">PDF</string>
+
+    <!-- 5.Modulo de agendar cita -->
+    <string name="m5_tit1">Agenda tu cita médica</string>
+    <string name="m5_txt1">Fecha</string>
+    <string name="m5_txt2">Hora</string>
+    <string name="m5_txt3">Nombre completo</string>
+    <string name="m5_txt4">Edad</string>
+    <string name="m5_txt5">Razón de cita</string>
+    <string name="m5_txt6">Tipo de servicio que solicita:</string>
+    <string name="m5_rdb1">Terapia de pareja</string>
+    <string name="m5_rdb2">Terapia individual</string>
+    <string name="m5_rdb3">Terapia familiar</string>
+    <string name="m5_txt7">Tipo de consulta:</string>
+    <string name="m5_rdb4">Presencial</string>
+    <string name="m5_rdb5">Virtual</string>
+
+
+    <!-- 6.Modulo de ayuda -->
+    <string name="m6_tit1">Ayuda</string>
+    <string name="m6_txt1">¿Qué contiene?</string>
+    <string name="m6_txt2">
+        -Carrucel de información mas relevante de la clínica.
+        -Módulo Agendar cita.
+        -Módulo Ayuda.
+        -Módulo Acerca de.
+    </string>
+    <string name="m6_txt3">¿Comó agendo una cita?</string>
+    <string name="m6_txt4">Para poder agendar una cita necesitas primero aprobar un filtro de 4 preguntas para poder ver si eres apto para generar tu cita. Si eres aprobado ya solo necesitas llenar tus datos personales y dar clíc en el botón “Agendar”.</string>
+    <string name="m6_txt5">¿Comó cancelo una cita?</string>
+    <string name="m6_txt6">Para cancelar tu cita, solo ingresa al módulo “Agendar cita” y da clíc en el botón “Cancelar y tu cita sera cancelada.</string>
+
+
+    <!-- 7.Modulo Acerca de -->
+    <string name="m7_tit1">Acerca de</string>
+    <string name="m7_txt1">Políticas de privacidad de la aplicación móvil</string>
+    <string name="m7_txt2">Aquí se mostraran las políticas de privacidad de la aplicación.</string>
+    <string name="m7_txt3">Políticas de privacidad de la clínica</string>
+    <string name="m7_txt4">Aquí se mostraran las políticas de privacidad de la clínica.</string>
+
+    <!-- 8.Modulo PDF -->
+    <string name="m8_tit1">PDF</string>
+    <string name="m8_txt1">Sube aquí tu credencial de lector en PDF.</string>
+    <string name="m8_btn1">Subir PDF</string>
+
+    <!-- 9.Modulo de filtro de preguntas -->
+    <string name="m9_tit1">Filtro de preguntas</string>
+    <string name="m9_txt1">¿En los últimos 6 meses has pensado en atentar en contra de tu vida o la vida de alguien más? </string>
+    <string name="m9_txt2">¿Consumes sustancias adictivas legales o ilegales?</string>
+    <string name="m9_txt3">En caso de que sí, ¿este consumo de relaciona con tu mítico de consulta?</string>
+    <string name="m9_txt4">En la actualidad, ¿vives alguna situación de violencia?</string>
+    <string name="m9_btn1">Enviar</string>
+    <string name="m9_btn2">Cancelar</string>
 
 </resources>
