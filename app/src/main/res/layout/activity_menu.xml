@@ -189,4 +189,36 @@
         app:layout_constraintVertical_bias="0.961"
         app:srcCompat="@drawable/an_cjt_1" />
 
+    <ImageButton
+        android:id="@+id/id_m4_img7"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:background="@drawable/an_cjt_1"
+        android:contentDescription="@string/m4_txt5"
+        android:elevation="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/id_m4_img6"
+        app:layout_constraintEnd_toEndOf="@+id/id_m4_img6"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="@+id/id_m4_img6"
+        app:layout_constraintTop_toTopOf="@+id/id_m4_img6"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/encuesta" />
+
+    <ImageButton
+        android:id="@+id/id_m4_img8"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:background="@drawable/an_cjt_1"
+        android:contentDescription="@string/m4_txt6"
+        android:elevation="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/id_m4_img6"
+        app:layout_constraintEnd_toEndOf="@+id/id_m4_img6"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="@+id/id_m4_img6"
+        app:layout_constraintTop_toTopOf="@+id/id_m4_img6"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/salida2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

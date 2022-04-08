@@ -35,6 +35,8 @@
     <string name="m4_txt2">Ayuda</string>
     <string name="m4_txt3">Acerca de</string>
     <string name="m4_txt4">PDF</string>
+    <string name="m4_txt5">Encuesta</string>
+    <string name="m4_txt6">Salir</string>
 
     <!-- 5.Modulo de agendar cita -->
     <string name="m5_tit1">Agenda tu cita médica</string>
