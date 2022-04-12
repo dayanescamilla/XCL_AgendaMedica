@@ -52,6 +52,13 @@
     <string name="m5_txt7">Tipo de consulta:</string>
     <string name="m5_rdb4">Presencial</string>
     <string name="m5_rdb5">Virtual</string>
+    <string name="m5_btn1">Agendar</string>
+    <string name="m5_btn2">Cancelar</string>
+    <string name="m5_btn3">Fecha</string>
+    <string name="m5_btn4">Hora</string>
+    <string name="m5_etxt1">Fecha</string>
+    <string name="m5_etxt2">Hora</string>
+
 
 
     <!-- 6.Modulo de ayuda -->
