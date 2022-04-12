@@ -27,7 +27,7 @@
         android:layout_marginEnd="32dp"
         android:text="@string/m9_tit1"
         android:textColor="#000000"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,17 +38,17 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="411dp"
-        android:layout_height="624dp"
+        android:layout_width="413dp"
+        android:layout_height="593dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m9_tit1"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.361">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="@string/m9_txt1"
                 android:textColor="#000000"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.363"
@@ -83,12 +83,11 @@
                 app:layout_constraintVertical_bias="0.017">
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb1"
+                    android:id="@+id/id_m9_rd1"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-
-                    android:text="Si"
+                    android:text="@string/m9_rd1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.172"
@@ -97,11 +96,11 @@
                     app:layout_constraintVertical_bias="0.35" />
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb2"
+                    android:id="@+id/id_m9_rd2"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="No"
+                    android:text="@string/m9_rd2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.758"
@@ -119,7 +118,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="@string/m9_txt2"
                 android:textColor="#000000"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -139,11 +138,11 @@
                 app:layout_constraintVertical_bias="0.431">
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb3"
+                    android:id="@+id/id_m9_rd3"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="Si"
+                    android:text="@string/m9_rd3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.172"
@@ -152,11 +151,11 @@
                     app:layout_constraintVertical_bias="0.35" />
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb4"
+                    android:id="@+id/id_m9_rd4"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="No"
+                    android:text="@string/m9_rd4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.758"
@@ -194,11 +193,11 @@
                 app:layout_constraintVertical_bias="0.852">
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb5"
+                    android:id="@+id/id_m9_rd5"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="Si"
+                    android:text="@string/m9_rd5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.172"
@@ -207,11 +206,11 @@
                     app:layout_constraintVertical_bias="0.35" />
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb6"
+                    android:id="@+id/id_m9_rd6"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="No"
+                    android:text="@string/m9_rd6"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.758"
@@ -249,11 +248,11 @@
                 app:layout_constraintVertical_bias="0.852">
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb7"
+                    android:id="@+id/id_m9_rd7"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="Si"
+                    android:text="@string/m9_rd7"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.172"
@@ -262,11 +261,11 @@
                     app:layout_constraintVertical_bias="0.35" />
 
                 <RadioButton
-                    android:id="@+id/id_m9_rdb8"
+                    android:id="@+id/id_m9_rd8"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="No"
+                    android:text="@string/m9_rd8"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.758"
