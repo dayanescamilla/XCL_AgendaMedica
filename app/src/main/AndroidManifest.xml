@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XCL_AgendaMedica">
         <activity
-            android:name=".filtro_reguntas"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".menu"
+            android:exported="false" />
+        <activity
+            android:name=".Documentos"
+            android:exported="false" />
+        <activity
+            android:name=".Acerca"
+            android:exported="false" />
+        <activity
+            android:name=".Ayuda"
             android:exported="false" />
         <activity
             android:name=".modulo_registro"
@@ -22,7 +31,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Agendar"
             android:exported="true"
             android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
