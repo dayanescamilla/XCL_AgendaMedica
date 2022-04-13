@@ -26,6 +26,9 @@
     <string name="m3_txt2">Ingresar correo electrónico</string>
     <string name="m3_txt3">Ingresar contraseña</string>
     <string name="m3_txt4">Soy mayor de 18 años y acepto los términos y condiciones</string>
+    <string name="m3_edittxt1">Nombre completo</string>
+    <string name="m3_edittxt2">Correo electronico</string>
+    <string name="m3_edittxt3">**********</string>
     <string name="m3_btn1">Registrarse</string>
 
     <!-- 4.Modulo de menu principal -->
@@ -71,7 +74,6 @@
 
 
 
-
     <!-- 6.Modulo de ayuda -->
     <string name="m6_tit1">Ayuda</string>
     <string name="m6_txt1">¿Qué contiene?</string>
@@ -101,12 +103,42 @@
 
     <!-- 9.Modulo de filtro de preguntas -->
     <string name="m9_tit1">Filtro de preguntas</string>
-    <string name="m9_txt1">¿En los últimos 6 meses has pensado en atentar en contra de tu vida o la vida de alguien más? </string>
-    <string name="m9_txt2">¿Consumes sustancias adictivas legales o ilegales?</string>
-    <string name="m9_txt3">En caso de que sí, ¿este consumo de relaciona con tu mítico de consulta?</string>
-    <string name="m9_txt4">En la actualidad, ¿vives alguna situación de violencia?</string>
+    <string name="m9_txt1">1.-¿En los últimos 6 meses has pensado en atentar en contra de tu vida o la vida de alguien más?</string>
+    <string name="m9_txt2">2.-¿Consumes sustancias adictivas legales o ilegales?</string>
+    <string name="m9_txt3">3.-En caso de que sí, ¿este consumo de relaciona con tu mítico de consulta?</string>
+    <string name="m9_txt4">4.-En la actualidad, ¿vives alguna situación de violencia?</string>
+    <string name="m9_rd1">Si</string>
+    <string name="m9_rd2">No</string>
+    <string name="m9_rd3">Si</string>
+    <string name="m9_rd4">No</string>
+    <string name="m9_rd5">Si</string>
+    <string name="m9_rd6">No</string>
+    <string name="m9_rd7">Si</string>
+    <string name="m9_rd8">No</string>
     <string name="m9_btn1">Enviar</string>
     <string name="m9_btn2">Cancelar</string>
 
     <!-- 10. Modulo encuesta de satisfaccion -->
+    <string name="m10_tit1">Encuesta de satisfacción al usuario</string>
+    <string name="m10_txt1">1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?</string>
+    <string name="m10_txt2">2.-¿Tuviste problemas al agendar una cita?</string>
+    <string name="m10_txt3">3.-¿Cómo te parecio la consulta virtual?</string>
+    <string name="m10_txt4">4.-¿Volverias agendar tu cita por medio de la aplicación?</string>
+    <string name="m10_txt5">5.-¿Recomendarias esta aplicación a tus conocidos?</string>
+    <string name="m10_rd1">Muy positiva</string>
+    <string name="m10_rd2">Positiva</string>
+    <string name="m10_rd3">Neutral</string>
+    <string name="m10_rd4">Negativa</string>
+    <string name="m10_rd5">Muy negativa</string>
+    <string name="m10_rd6">Si</string>
+    <string name="m10_rd7">No</string>
+    <string name="m10_rd8">Excelente</string>
+    <string name="m10_rd9">Buena</string>
+    <string name="m10_rd10">Mala</string>
+    <string name="m10_rd11">Pesima</string>
+    <string name="m10_rd12">Si</string>
+    <string name="m10_rd13">No</string>
+    <string name="m10_rd14">Si</string>
+    <string name="m10_rd15">No</string>
+    <string name="m10_btn1">Enviar</string>
 </resources>
