@@ -41,10 +41,15 @@
     <!-- 5.Modulo de agendar cita -->
     <string name="m5_tit1">Agenda tu cita médica</string>
     <string name="m5_txt1">Fecha</string>
+    <string name="m5_etxt1">Fecha</string>
     <string name="m5_txt2">Hora</string>
+    <string name="m5_etxt2">Hora</string>
     <string name="m5_txt3">Nombre completo</string>
+    <string name="m5_etxt3">Nombre Completo</string>
     <string name="m5_txt4">Edad</string>
+    <string name="m5_etxt4">Edad</string>
     <string name="m5_txt5">Razón de cita</string>
+    <string name="m5_etxt5">Razon de Cita</string>
     <string name="m5_txt6">Tipo de servicio que solicita:</string>
     <string name="m5_rdb1">Terapia de pareja</string>
     <string name="m5_rdb2">Terapia individual</string>
@@ -54,10 +59,16 @@
     <string name="m5_rdb5">Virtual</string>
     <string name="m5_btn1">Agendar</string>
     <string name="m5_btn2">Cancelar</string>
-    <string name="m5_btn3">Fecha</string>
-    <string name="m5_btn4">Hora</string>
-    <string name="m5_etxt1">Fecha</string>
-    <string name="m5_etxt2">Hora</string>
+    <string name="m5_btn3">Fechas</string>
+    <string name="m5_btn4">Horas</string>
+
+
+
+
+
+
+
+
 
 
 
