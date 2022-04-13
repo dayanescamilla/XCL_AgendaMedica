@@ -34,10 +34,10 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".encuesta"
+            android:name=".agendar"
             android:exported="false" />
         <activity
-            android:name=".agendar"
+            android:name=".encuesta"
             android:exported="true"
             android:screenOrientation="portrait" > <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
