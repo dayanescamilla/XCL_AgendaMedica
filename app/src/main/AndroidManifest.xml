@@ -34,7 +34,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".agendar"
+            android:name=".Agendar"
             android:exported="false" />
         <activity
             android:name=".encuesta"
