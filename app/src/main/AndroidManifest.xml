@@ -11,50 +11,35 @@
         android:theme="@style/Theme.XCL_AgendaMedica" >
         <activity
             android:name=".filtro_reguntas"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:exported="false" />
         <activity
             android:name=".Ayuda"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".Login"/>
+            android:exported="false" />
         <activity
             android:name=".menu"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Documentos"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:exported="false" />
         <activity
             android:name=".Acerca"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.XCL_AgendaMedica"
-            android:parentActivityName=".menu"/>
+            android:exported="false" />
         <activity
             android:name=".encuesta"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".modulo_registro"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".Login"/>
-        <activity
-            android:name=".Login"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Agendar"
-            android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".Login"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Agendar"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".modulo_registro"
             android:exported="true"
-            android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
+            android:screenOrientation="portrait" > <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

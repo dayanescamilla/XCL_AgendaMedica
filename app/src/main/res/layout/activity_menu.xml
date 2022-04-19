@@ -47,6 +47,36 @@
         app:layout_constraintTop_toTopOf="@+id/id_m4_img1"
         app:layout_constraintVertical_bias="0.849" />
 
+    // Carrusel
+    <RelativeLayout
+        android:layout_width="421dp"
+        android:layout_height="190dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/Transparente"
+            app:cardCornerRadius="10dp">
+
+            <ViewFlipper
+                android:id="@+id/v_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:elevation="15dp" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    //fin de carrusel
+
     <ImageButton
         android:id="@+id/id_m4_img2"
         android:layout_width="wrap_content"
