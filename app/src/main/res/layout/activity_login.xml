@@ -19,21 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/id_btn2_regresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/id_wave_1"
-        app:layout_constraintEnd_toEndOf="@+id/id_wave_1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/id_wave_1"
-        app:layout_constraintTop_toTopOf="@+id/id_wave_1"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_btn2_regresar" />
-
     <TextView
         android:id="@+id/id_m2_tit1"
         android:layout_width="wrap_content"
@@ -47,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="@+id/id_wave_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/id_wave_1"
-        app:layout_constraintTop_toBottomOf="@+id/id_btn2_regresar" />
+        tools:layout_editor_absoluteY="50dp" />
 
     <TextView
         android:id="@+id/id_m2_sub1"

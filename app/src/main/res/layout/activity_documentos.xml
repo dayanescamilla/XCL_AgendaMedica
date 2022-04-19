@@ -7,18 +7,6 @@
     tools:context=".Documentos">
 
     <ImageView
-        android:id="@+id/id_ic_btn_regresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_btn_regresar" />
-
-    <ImageView
         android:id="@+id/id_wave_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,11 +19,11 @@
         app:srcCompat="@drawable/wave_3" />
 
     <TextView
+        android:layout_marginTop="8dp"
         android:id="@+id/id_m8_tit1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="@string/m8_tit1"
         android:textColor="@color/black"
@@ -44,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/id_wave_3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_ic_btn_regresar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

@@ -1,9 +1,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- ESTILO CON ACTION BAR DESACTIVADA TEMA CLARO -->
     <style name="Theme.XCL_AgendaMedica" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/RoyalBlue</item> <!-- Barra de notificaciones -->
+        <item name="colorPrimary">@color/RoyalBlue</item>
+        <item name="colorPrimaryVariant">@color/RoyalBlue</item> <!-- COLOR DE BARRA DE NOTIFICACIONES -->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+    <!-- ESTILO CON ACTION BAR ACTIVADA TEMA CLARO-->
+    <style name="Theme.XCL_AgendaMedica2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/RoyalBlue</item> <!-- COLOR ACTION BAR-->
+        <item name="colorPrimaryVariant">@color/RoyalBlue</item> <!-- COLOR DE BARRA DE NOTIFICACIONES -->
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
