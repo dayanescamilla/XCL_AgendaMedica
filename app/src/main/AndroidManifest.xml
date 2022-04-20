@@ -5,16 +5,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Agenda Médica"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XCL_AgendaMedica" >
+        android:theme="@style/Theme.XCL_AgendaMedica">
         <activity
             android:name=".filtro_reguntas"
-            android:exported="false"/>
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Ayuda"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:parentActivityName=".menu"/>
         <activity
