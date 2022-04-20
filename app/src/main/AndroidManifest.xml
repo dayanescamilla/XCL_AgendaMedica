@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XCL_AgendaMedica" >
         <activity
+            android:name=".MenuPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".filtro_reguntas"
             android:exported="false"/>
         <activity

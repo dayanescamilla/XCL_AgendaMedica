@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_ic_nav_dashboard"
+        android:icon="@drawable/ic_nav_dashboard"
+        android:title="@string/m11_tit1"/>
+
+    <item
+        android:id="@+id/id_ic_nav_encuesta"
+        android:icon="@drawable/ic_nav_encuesta"
+        android:title="@string/m11_tit2"/>
+
+    <item
+        android:id="@+id/id_ic_nav_salir"
+        android:icon="@drawable/ic_nav_salir"
+        android:title="@string/m11_tit3"/>
+
+
+</menu>
