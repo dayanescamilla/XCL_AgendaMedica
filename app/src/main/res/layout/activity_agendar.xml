@@ -61,7 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt1"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -70,10 +71,10 @@
 
                 <Button
                     android:id="@+id/id_m5_btn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/an_btn_2"
-                    android:text="@string/m5_btn3" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_btn_calender"
+                    android:contentDescription="@string/m4_txt2"/>
 
                 <EditText
                     android:id="@+id/m5_etxt1"
@@ -91,7 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt2"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,10 +102,10 @@
 
                 <Button
                     android:id="@+id/id_m5_btn4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/an_btn_2"
-                    android:text="@string/m5_btn4" />
+                    android:layout_width="50dp"
+                    android:layout_height="52dp"
+                    android:drawableLeft="@drawable/ic_nav_salir"
+                    android:contentDescription="@string/m5_btn4" />
 
                 <EditText
                     android:id="@+id/id_m5_etxt2"
@@ -122,7 +124,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt3"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro" />
 
             <EditText
                 android:id="@+id/id_m5_etxt3"
@@ -139,7 +142,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt4"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro"/>
 
             <EditText
                 android:id="@+id/id_m5_etxt4"
@@ -156,7 +160,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt5"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro"/>
 
             <EditText
                 android:id="@+id/id_m5_etxt5"
@@ -173,7 +178,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/m5_txt6"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -203,7 +209,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/m5_txt7"
-                android:textSize="24sp" />
+                android:textSize="@dimen/dimDescripicon"
+                android:textColor="@color/TextosNegro"/>
 
             <RadioGroup
                 android:layout_width="match_parent"

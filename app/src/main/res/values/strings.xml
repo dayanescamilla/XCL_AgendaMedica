@@ -141,4 +141,13 @@
     <string name="m11_tit3">Salir</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <!-- TAMAÑO DE LETRA TEXTOS -->
+    <dimen name="dimTitulos">32sp</dimen>
+    <dimen name="dimSubtitulos">24sp</dimen>
+    <dimen name="dimDescripicon">18sp</dimen>
+
+
 </resources>

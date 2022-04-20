@@ -1,7 +1,9 @@
 package com.example.xcl_agendamedica;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +16,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Dashboard extends Fragment {
+
+    CardView card1,card2,card3,card4;
+    View vista;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,12 +58,52 @@ public class Dashboard extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        card1 = vista.findViewById(R.id.cardViewAgendar);
+        card2 = vista.findViewById(R.id.cardViewAyuda);
+        card3 = vista.findViewById(R.id.cardViewAcerca);
+        card4 = vista.findViewById(R.id.cardViewDocumentos);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Agendar.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Ayuda.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Acerca.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),Documentos.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+        return vista;
     }
+
 }
