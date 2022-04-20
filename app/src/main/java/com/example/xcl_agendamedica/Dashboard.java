@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ViewFlipper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +20,7 @@ import android.view.ViewGroup;
  */
 public class Dashboard extends Fragment {
 
+    ViewFlipper vflipper;
     CardView card1,card2,card3,card4;
     View vista;
 
@@ -31,6 +35,8 @@ public class Dashboard extends Fragment {
 
     public Dashboard() {
         // Required empty public constructor
+
+
     }
 
     /**
@@ -51,15 +57,16 @@ public class Dashboard extends Fragment {
         return fragment;
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
+           mParam1 = getArguments().getString(ARG_PARAM1);
+           mParam2 = getArguments().getString(ARG_PARAM2);
+       }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -103,7 +110,28 @@ public class Dashboard extends Fragment {
             }
         });
 
+
+        int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
+        vflipper = vista.findViewById(R.id.v_flipper);
+        //sentencia de validación carrusel
+        for (int image : images) {
+            flipperImages(image);
+        }
+
+
         return vista;
     }
 
+    public void flipperImages(int image){
+        ImageView imageView = new ImageView(getActivity());
+        imageView.setBackgroundResource(image);
+
+        vflipper.addView(imageView);
+        vflipper.setFlipInterval(3000);
+        vflipper.setAutoStart(true);
+
+        //activar animación carrusel
+        vflipper.setInAnimation(getActivity(), android.R.anim.slide_in_left);
+        vflipper.setOutAnimation(getActivity(), android.R.anim.slide_out_right);
+    }
 }

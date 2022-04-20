@@ -3,6 +3,8 @@ package com.example.xcl_agendamedica;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MenuPrincipal extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +25,10 @@ public class MenuPrincipal extends AppCompatActivity {
         BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
         btnNav.setOnNavigationItemSelectedListener(navlistener);
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout1,new Dashboard()).commit();
+
+
     }
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlistener = new
             BottomNavigationView.OnNavigationItemSelectedListener() {

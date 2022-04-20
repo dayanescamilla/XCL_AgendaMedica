@@ -62,18 +62,19 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/id_m10_btn1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1">
+        app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/id_m10_txt1"
-                android:layout_width="313dp"
+                android:layout_width="match_parent"
                 android:layout_height="87dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
@@ -154,7 +155,7 @@
 
             <TextView
                 android:id="@+id/id_m10_txt2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
@@ -203,7 +204,7 @@
 
             <TextView
                 android:id="@+id/id_m10_txt3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
@@ -273,7 +274,7 @@
 
             <TextView
                 android:id="@+id/id_m10_txt4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
@@ -321,7 +322,7 @@
 
             <TextView
                 android:id="@+id/id_m10_txt5"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"

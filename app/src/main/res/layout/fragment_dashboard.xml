@@ -53,6 +53,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+        //carrusel
+
+        // Fin de carrusel
+
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="0dp"
@@ -62,9 +66,10 @@
             android:elevation="15dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints">
 
             <androidx.cardview.widget.CardView
@@ -82,7 +87,6 @@
 
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
-
 
         <LinearLayout
             android:id="@+id/linearLayout"
