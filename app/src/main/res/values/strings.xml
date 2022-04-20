@@ -66,14 +66,6 @@
     <string name="m5_btn4">Horas</string>
 
 
-
-
-
-
-
-
-
-
     <!-- 6.Modulo de ayuda -->
     <string name="m6_tit1">Ayuda</string>
     <string name="m6_txt1">¿Qué contiene?</string>
@@ -141,4 +133,12 @@
     <string name="m10_rd14">Si</string>
     <string name="m10_rd15">No</string>
     <string name="m10_btn1">Enviar</string>
+
+
+    <!-- 11. Boton de navegacion-->
+    <string name="m11_tit1">Menú</string>
+    <string name="m11_tit2">Encuesta</string>
+    <string name="m11_tit3">Salir</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

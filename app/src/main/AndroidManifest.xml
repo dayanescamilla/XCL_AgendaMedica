@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xcl_agendamedica" >
+    package="com.example.xcl_agendamedica">
 
     <application
         android:allowBackup="true"
@@ -8,50 +8,53 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XCL_AgendaMedica" >
+        android:theme="@style/Theme.XCL_AgendaMedica">
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="false" />
         <activity
             android:name=".filtro_reguntas"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Ayuda"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".menu"
             android:exported="false" />
         <activity
             android:name=".Documentos"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Acerca"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".encuesta"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".modulo_registro"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Agendar"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" > <!-- Desactivar Rotacion de pantalla -->
+            android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
