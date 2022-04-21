@@ -175,4 +175,7 @@
     <string name="m13_btn2">Guardar cambios</string>
     <string name="m13_btn3">Cambiar foto de perfil</string>
 
+
+    <string name="con_des1">ImageOne</string>
+
 </resources>
