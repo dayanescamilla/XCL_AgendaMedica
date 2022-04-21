@@ -177,5 +177,6 @@
 
 
     <string name="con_des1">ImageOne</string>
+    <string name="con_des2">ImagePDF</string>
 
 </resources>
