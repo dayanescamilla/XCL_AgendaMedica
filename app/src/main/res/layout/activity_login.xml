@@ -27,13 +27,15 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/m2_tit1"
-        android:textSize="@dimen/dimTitulos"
         android:textColor="@color/TextosBlanco"
+        android:textSize="@dimen/dimTitulos"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/id_wave_1"
         app:layout_constraintEnd_toEndOf="@+id/id_wave_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/id_wave_1"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintTop_toTopOf="@+id/id_wave_1"
+        app:layout_constraintVertical_bias="0.17000002" />
 
     <TextView
         android:id="@+id/id_m2_sub1"
@@ -139,7 +141,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/an_btn_1"
         android:text="@string/m2_btn1"
-        android:textColor="@color/white"
+        android:textColor="@color/TextosBlanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/id_m2_btn2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -159,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/id_m2_cjt2"
         app:layout_constraintVertical_bias="0.22000003" />
 
-    <Button
+ <!--   <Button
         android:id="@+id/id_m2_btn3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -171,7 +173,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_m2_btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/id_m2_btn1" /> -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
