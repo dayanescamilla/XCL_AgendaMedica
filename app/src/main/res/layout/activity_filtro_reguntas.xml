@@ -16,7 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.003"
-        app:srcCompat="@drawable/wave_3" />
+        app:srcCompat="@drawable/wave_3"
+        android:contentDescription="@string/con_des1"/>
 
 
     <TextView
@@ -41,9 +42,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/id_m9_btn1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,60 +53,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/id_m9_txt1"
                 android:layout_width="match_parent"
-                android:layout_height="67dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_height="wrap_content"
                 android:text="@string/m9_txt1"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.363"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.232" />
+                android:textColor="@color/TextosNegro"
+                android:textSize="@dimen/dimDescripicon" />
 
             <RadioGroup
                 android:id="@+id/id_m9_radioGroup1"
-                android:layout_width="75dp"
-                android:layout_height="105dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.13"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_txt1"
-                app:layout_constraintVertical_bias="0.017">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/id_m9_rd1"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.172"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd1" />
 
                 <RadioButton
                     android:id="@+id/id_m9_rd2"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.758"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd2" />
 
             </RadioGroup>
 
@@ -115,54 +90,28 @@
                 android:id="@+id/id_m9_txt2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
                 android:text="@string/m9_txt2"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_radioGroup1"
-                app:layout_constraintVertical_bias="0.025" />
+                android:textColor="@color/TextosNegro"
+                android:textSize="@dimen/dimDescripicon"/>
 
             <RadioGroup
                 android:id="@+id/id_m9_radioGroup2"
-                android:layout_width="70dp"
-                android:layout_height="104dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.141"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_txt1"
-                app:layout_constraintVertical_bias="0.431">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/id_m9_rd3"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.172"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd3"/>
 
                 <RadioButton
                     android:id="@+id/id_m9_rd4"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd4"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.758"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd4"/>
 
             </RadioGroup>
 
@@ -170,54 +119,28 @@
                 android:id="@+id/id_m9_txt3"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
                 android:text="@string/m9_txt3"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_radioGroup2"
-                app:layout_constraintVertical_bias="0.059" />
+                android:textColor="@color/TextosNegro"
+                android:textSize="@dimen/dimDescripicon"/>
 
             <RadioGroup
                 android:id="@+id/id_m9_radioGroup3"
-                android:layout_width="70dp"
-                android:layout_height="104dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.154"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_txt1"
-                app:layout_constraintVertical_bias="0.852">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/id_m9_rd5"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.172"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd5" />
 
                 <RadioButton
                     android:id="@+id/id_m9_rd6"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd6"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.758"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd6" />
 
             </RadioGroup>
 
@@ -228,51 +151,27 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="@string/m9_txt4"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_radioGroup3"
-                app:layout_constraintVertical_bias="0.785" />
+                android:textColor="@color/TextosNegro"
+                android:textSize="@dimen/dimDescripicon"/>
 
             <RadioGroup
                 android:id="@+id/id_m9_radioGroup4"
-                android:layout_width="100dp"
-                android:layout_height="104dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.54"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_m9_txt1"
-                app:layout_constraintVertical_bias="0.852">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/id_m9_rd7"
                     android:layout_width="72dp"
                     android:layout_height="48dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd7"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.172"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd7"/>
 
                 <RadioButton
                     android:id="@+id/id_m9_rd8"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:buttonTint="@color/RoyalBlue"
-                    android:text="@string/m9_rd8"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.758"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.35" />
+                    android:text="@string/m9_rd8"/>
 
             </RadioGroup>
         </LinearLayout>
