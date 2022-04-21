@@ -69,12 +69,7 @@
     <!-- 6.Modulo de ayuda -->
     <string name="m6_tit1">Ayuda</string>
     <string name="m6_txt1">¿Qué contiene?</string>
-    <string name="m6_txt2">
-        -Carrucel de información mas relevante de la clínica.
-        -Módulo Agendar cita.
-        -Módulo Ayuda.
-        -Módulo Acerca de.
-    </string>
+    <string name="m6_txt2"> Carrucel de información mas relevante de la clínica, módulo Agendar cita, módulo Ayuda y módulo Acerca de.</string>
     <string name="m6_txt3">¿Comó agendo una cita?</string>
     <string name="m6_txt4">Para poder agendar una cita necesitas primero aprobar un filtro de 4 preguntas para poder ver si eres apto para generar tu cita. Si eres aprobado ya solo necesitas llenar tus datos personales y dar clíc en el botón “Agendar”.</string>
     <string name="m6_txt5">¿Comó cancelo una cita?</string>

@@ -65,7 +65,7 @@
         android:textColor="@color/TextosNegro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_m6_txt1" />
+        app:layout_constraintTop_toBottomOf="@+id/id_m6_txt1"/>
 
     <TextView
         android:id="@+id/id_m6_txt3"

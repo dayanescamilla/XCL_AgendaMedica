@@ -2,14 +2,18 @@ package com.example.xcl_agendamedica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -32,6 +36,29 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
 
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
+    }
+
+
+     //DIALOGO DE ALERTA BOTON CANCELAR
+    public void showAlertDialog(View view){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Cancelar Cita");
+        alert.setMessage("¿Estas seguro que deseas cancelar tu cita medica?");
+        alert.setPositiveButton("SI", new DialogInterface.OnClickListener() { //ESTABLECER BOTON POSITIVO
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent i2 = new Intent(Agendar.this,MenuPrincipal.class);
+                startActivity(i2);
+
+            }
+        });
+        alert.setNegativeButton("NO", new DialogInterface.OnClickListener() { //ESTABLECER BOTON NEGATIVO
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(Agendar.this,"Continua agendado tu cita medica", Toast.LENGTH_SHORT).show();
+            }
+        });
+        alert.create().show(); //MOSTRAR ALERTA
     }
 
     @Override
