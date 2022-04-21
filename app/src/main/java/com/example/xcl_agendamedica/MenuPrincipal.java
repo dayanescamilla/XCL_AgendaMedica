@@ -46,8 +46,9 @@ public class MenuPrincipal extends AppCompatActivity {
                             break;
 
                         case R.id.id_ic_nav_salir:
-                            selectedFragment = new Salir();
+                            selectedFragment = new Perfil();
                             break;
+
                     }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout1,selectedFragment).commit();

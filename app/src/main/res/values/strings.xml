@@ -134,7 +134,6 @@
     <string name="m10_rd15">No</string>
     <string name="m10_btn1">Enviar</string>
 
-
     <!-- 11. Boton de navegacion-->
     <string name="m11_tit1">Menú</string>
     <string name="m11_tit2">Encuesta</string>
@@ -142,12 +141,38 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
-
     <!-- TAMAÑO DE LETRA TEXTOS -->
     <dimen name="dimTitulos">32sp</dimen>
     <dimen name="dimSubtitulos">24sp</dimen>
     <dimen name="dimDescripicon">18sp</dimen>
 
+    <!-- 12. Fragment Perfil de usuario -->
+    <string name="m12_tit1">Hola,</string>
+    <string name="m12_txt1">Nombre:</string>
+    <string name="m12_txt2">Correo electronico:</string>
+    <string name="m12_txt3">Teléfono:</string>
+    <string name="m12_txt4">Teléfono de emergencia:</string>
+    <string name="m12_txt5">PDF:</string>
+    <string name="m12_txt6">Carta de confidencialidad:</string>
+    <string name="m12_cjt1">Nombre</string>
+    <string name="m12_cjt2">Correo electronico</string>
+    <string name="m12_cjt3">Teléfono</string>
+    <string name="m12_cjt4">Teléfono de emergencia</string>
+    <string name="m12_cjt5">PDF</string>
+    <string name="m12_cjt6">Carta</string>
+    <string name="m12_btn1">Editar perfil</string>
+
+    <!-- 13. Fragment Perfil de usuario -->
+    <string name="m13_txt1">Nombre:</string>
+    <string name="m13_txt2">Correo electronico:</string>
+    <string name="m13_txt3">Teléfono:</string>
+    <string name="m13_txt4">Teléfono de emergencia:</string>
+    <string name="m13_cjt1">Nombre</string>
+    <string name="m13_cjt2">Correo electronico</string>
+    <string name="m13_cjt3">Teléfono</string>
+    <string name="m13_cjt4">Teléfono de emergencia</string>
+    <string name="m13_btn1">Subir documentos</string>
+    <string name="m13_btn2">Guardar cambios</string>
+    <string name="m13_btn3">Cambiar foto de perfil</string>
 
 </resources>
