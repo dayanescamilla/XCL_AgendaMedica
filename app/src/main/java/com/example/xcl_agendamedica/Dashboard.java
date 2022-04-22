@@ -1,5 +1,7 @@
 package com.example.xcl_agendamedica;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 /**
@@ -66,6 +69,7 @@ public class Dashboard extends Fragment {
            mParam2 = getArguments().getString(ARG_PARAM2);
        }
     }
+
 
 
     @Override
