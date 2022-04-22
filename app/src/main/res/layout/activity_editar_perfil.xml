@@ -161,7 +161,6 @@
         app:layout_constraintEnd_toStartOf="@+id/id_m13_btn2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_m13_cjt4"
         app:layout_constraintVertical_bias="0.493" />
 
     <Button
@@ -174,8 +173,7 @@
         android:text="@string/m13_btn2"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_m13_cjt4" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/id_m13_tit1"
