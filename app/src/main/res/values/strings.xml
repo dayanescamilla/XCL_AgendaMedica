@@ -142,7 +142,7 @@
     <dimen name="dimDescripicon">18sp</dimen>
 
     <!-- 12. Fragment Perfil de usuario -->
-    <string name="m12_tit1">Hola,</string>
+    <string name="m12_tit1">Perfil de Usuario</string>
     <string name="m12_txt1">Nombre:</string>
     <string name="m12_txt2">Correo electronico:</string>
     <string name="m12_txt3">Teléfono:</string>
