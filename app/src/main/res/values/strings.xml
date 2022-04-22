@@ -175,5 +175,6 @@
     <string name="con_des1">ImageOne</string>
     <string name="con_des2">ImagePDF</string>
     <string name="con_des3">ImagePerfil</string>
+    <string name="con_des4">ImageBienvenida</string>
 
 </resources>
