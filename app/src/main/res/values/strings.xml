@@ -84,9 +84,11 @@
     <string name="m7_txt4">Aquí se mostraran las políticas de privacidad de la clínica.</string>
 
     <!-- 8.Modulo PDF -->
-    <string name="m8_tit1">PDF</string>
-    <string name="m8_txt1">Sube aquí tu credencial de lector en PDF.</string>
-    <string name="m8_btn1">Subir PDF</string>
+    <string name="m8_tit1">Documentación</string>
+    <string name="m8_txt1">Sube aquí una foto o archivo PDF de los siguientes documentos.</string>
+    <string name="m8_txt2">-Credencial de lector.</string>
+    <string name="m8_txt3">-Carta de confidencialidad.</string>
+    <string name="m8_btn1">Subir documentos</string>
 
     <!-- 9.Modulo de filtro de preguntas -->
     <string name="m9_tit1">Filtro de preguntas</string>
