@@ -80,7 +80,7 @@ public class Dashboard extends Fragment {
         card1 = vista.findViewById(R.id.cardViewAgendar);
         card2 = vista.findViewById(R.id.cardViewAyuda);
         card3 = vista.findViewById(R.id.cardViewAcerca);
-        card4 = vista.findViewById(R.id.cardViewDocumentos);
+       // card4 = vista.findViewById(R.id.cardViewDocumentos);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,13 +106,13 @@ public class Dashboard extends Fragment {
             }
         });
 
-        card4.setOnClickListener(new View.OnClickListener() {
+      /*  card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(),Documentos.class);
                 getActivity().startActivity(i);
             }
-        });
+        }); */
 
 
         int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};

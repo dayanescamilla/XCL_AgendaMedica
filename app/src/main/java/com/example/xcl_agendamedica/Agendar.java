@@ -28,6 +28,8 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
+        this.setTitle("Agendar Cita");
+
 
         btnFecha = (Button)findViewById(R.id.id_m5_btn3);
         btnHora = (Button)findViewById(R.id.id_m5_btn4);

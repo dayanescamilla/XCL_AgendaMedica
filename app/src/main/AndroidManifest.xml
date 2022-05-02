@@ -53,7 +53,8 @@
             android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
