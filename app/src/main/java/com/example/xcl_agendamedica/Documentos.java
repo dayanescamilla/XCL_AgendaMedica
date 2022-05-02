@@ -11,5 +11,6 @@ public class Documentos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_documentos);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
+        this.setTitle("Documentos"); //TITULO MOSTRADO EN ACTION BAR
     }
 }
