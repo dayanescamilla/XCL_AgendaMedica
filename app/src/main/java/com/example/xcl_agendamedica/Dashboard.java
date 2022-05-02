@@ -24,7 +24,7 @@ import android.widget.ViewFlipper;
 public class Dashboard extends Fragment {
 
     ViewFlipper vflipper;
-    CardView card1,card2,card3,card4;
+    CardView cardAgendar,cardAcerca,cardAyuda,cardDocumentos;
     View vista;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -77,28 +77,39 @@ public class Dashboard extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        card1 = vista.findViewById(R.id.cardViewAgendar);
-        card2 = vista.findViewById(R.id.cardViewAyuda);
-        card3 = vista.findViewById(R.id.cardViewAcerca);
-       // card4 = vista.findViewById(R.id.cardViewDocumentos);
+        cardAgendar = vista.findViewById(R.id.cardViewAgendar);
+        cardAcerca = vista.findViewById(R.id.cardViewAcerca);
+        cardAyuda = vista.findViewById(R.id.cardViewAyuda);
+       // cardDocumentos = vista.findViewById(R.id.cardViewDocumentos);
 
-        card1.setOnClickListener(new View.OnClickListener() {
+        //MOSTRAR ALERTA DE DIALOGO
+        cardAgendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Agendar.class);
-                getActivity().startActivity(i);
+                AlertDialog.Builder alertAgendar = new AlertDialog.Builder(getContext());
+                alertAgendar.setTitle("Filtro de Preguntas");
+                alertAgendar.setMessage("Para poder agendar una cita medica se necesita responder un cuestionario muy simple.");
+        //METODO DE ACCION POSITIVA
+                alertAgendar.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent i2 = new Intent(getActivity(),filtro_reguntas.class);
+                        getActivity().startActivity(i2);
+                    }
+                });
+        //METODO DE ACCION NEGATIVA
+                alertAgendar.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(getContext(), "Se cancelo la cita medica", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                alertAgendar.show();
             }
         });
 
-        card2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Ayuda.class);
-                getActivity().startActivity(i);
-            }
-        });
-
-        card3.setOnClickListener(new View.OnClickListener() {
+        //DIRIGIRSE A MODULO ACERCA DE
+        cardAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), Acerca.class);
@@ -106,7 +117,16 @@ public class Dashboard extends Fragment {
             }
         });
 
-      /*  card4.setOnClickListener(new View.OnClickListener() {
+        //DIRIGIRSE A MODULO AYDUA
+        cardAyuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Ayuda.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+      /*  cardDocumentos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(),Documentos.class);
@@ -117,7 +137,7 @@ public class Dashboard extends Fragment {
 
         int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
         vflipper = vista.findViewById(R.id.v_flipper);
-        //sentencia de validación carrusel
+        //SENTENTICA DE VALIDACION CARRUSEL
         for (int image : images) {
             flipperImages(image);
         }
@@ -134,7 +154,7 @@ public class Dashboard extends Fragment {
         vflipper.setFlipInterval(3000);
         vflipper.setAutoStart(true);
 
-        //activar animación carrusel
+        //ACTIVAR ANIMACION DE CARRUSEL
         vflipper.setInAnimation(getActivity(), android.R.anim.slide_in_left);
         vflipper.setOutAnimation(getActivity(), android.R.anim.slide_out_right);
     }

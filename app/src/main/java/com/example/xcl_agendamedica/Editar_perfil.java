@@ -16,6 +16,8 @@ public class Editar_perfil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_perfil);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
+        this.setTitle("Editar Perfil"); //TITULO MOSTRADO EN ACTION BAR
 
         subirDoc = findViewById(R.id.id_m13_btn1);
 
