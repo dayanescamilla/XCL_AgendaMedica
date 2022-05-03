@@ -43,12 +43,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/m7_txt1"
-        android:textSize="@dimen/dimSubtitulos"
-        android:textColor="@color/TextosNegro"
         android:layout_marginTop="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/m7_txt1"
+        android:textColor="@color/TextosNegro"
+        android:textSize="@dimen/dimSubtitulos"
+        app:layout_constraintEnd_toStartOf="@+id/id_wave_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m7_tit1" />
 
@@ -57,11 +56,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:text="@string/m7_txt2"
-        android:textSize="@dimen/dimDescripicon"
         android:textColor="@color/TextosNegro"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/dimDescripicon"
+        app:layout_constraintEnd_toEndOf="@+id/id_m7_txt1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m7_txt1" />
 
@@ -70,12 +68,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/m7_txt3"
-        android:textSize="@dimen/dimSubtitulos"
-        android:textColor="@color/TextosNegro"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/m7_txt3"
+        android:textColor="@color/TextosNegro"
+        android:textSize="@dimen/dimSubtitulos"
+        app:layout_constraintEnd_toEndOf="@+id/id_m7_txt1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m7_txt2" />
 
@@ -84,11 +81,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:text="@string/m7_txt4"
-        android:textSize="@dimen/dimDescripicon"
         android:textColor="@color/TextosNegro"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/dimDescripicon"
+        app:layout_constraintEnd_toEndOf="@+id/id_m7_txt1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m7_txt3" />
 

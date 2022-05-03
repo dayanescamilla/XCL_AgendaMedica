@@ -11,6 +11,6 @@ public class Acerca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
-        this.setTitle("Acreca de"); //TITULO MOSTRADO EN ACTION BAR
+        this.setTitle("Acerca de"); //TITULO MOSTRADO EN ACTION BAR
     }
 }

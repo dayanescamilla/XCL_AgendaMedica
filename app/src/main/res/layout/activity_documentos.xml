@@ -41,12 +41,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/m8_txt1"
-        android:textSize="@dimen/dimSubtitulos"
-        android:textColor="@color/TextosNegro"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/m8_txt1"
+        android:textColor="@color/TextosNegro"
+        android:textSize="@dimen/dimSubtitulos"
+        app:layout_constraintEnd_toStartOf="@+id/id_wave_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m8_tit1" />
 
@@ -56,11 +55,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:text="@string/m8_txt2"
         android:textColor="#000000"
         android:textSize="@dimen/dimSubtitulos"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/id_wave_3"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m8_txt1" />
@@ -71,11 +69,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:text="@string/m8_txt3"
         android:textColor="#000000"
         android:textSize="@dimen/dimSubtitulos"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/id_wave_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_m8_txt2" />
 
