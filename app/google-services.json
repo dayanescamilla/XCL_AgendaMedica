@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "646728459518",
+    "project_id": "agendamedicaxcl",
+    "storage_bucket": "agendamedicaxcl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646728459518:android:1a2aa35391e2128697f1af",
+        "android_client_info": {
+          "package_name": "com.example.xcl_agendamedica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646728459518-isqh1gk24kmrfc0h28buql300jn0nph8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xcl_agendamedica",
+            "certificate_hash": "41a5e0dc8f4ce0956691f986b922494e21411342"
+          }
+        },
+        {
+          "client_id": "646728459518-hguak3olk61btf75pbk7n4ihnk5s9n4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWsC_qn2E8iww5Iw3LT_-ugaMclgJ0UI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646728459518-hguak3olk61btf75pbk7n4ihnk5s9n4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
