@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,9 +21,9 @@ import android.widget.Button;
  */
 public class Perfil extends Fragment {
 
-    Button btnedit;
+    Button btnEdit, btnSalir;
     View vista;
-
+    FirebaseAuth cAuth;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,20 +63,33 @@ public class Perfil extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        cAuth = FirebaseAuth.getInstance();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        vista = inflater.inflate(R.layout.fragment_perfil, container, false);
-        btnedit = vista.findViewById(R.id.id_m12_btn1);
 
-        btnedit.setOnClickListener(new View.OnClickListener() {
+        vista = inflater.inflate(R.layout.fragment_perfil, container, false);
+        btnEdit = vista.findViewById(R.id.id_m12_btn1);
+        btnSalir = vista.findViewById(R.id.id_m12_btn2);
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), Editar_perfil.class);
                 getActivity().startActivity(i);
+            }
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cAuth.signOut();
+                Toast.makeText(getActivity(),"Se cerro Sesion con exito", Toast.LENGTH_SHORT).show();
+                Intent i2 = new Intent(getActivity(), Login.class);
+                getActivity().startActivity(i2);
             }
         });
 
