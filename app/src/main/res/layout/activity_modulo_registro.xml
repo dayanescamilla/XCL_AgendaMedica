@@ -55,6 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/id_m3_edittxt1"
         app:layout_constraintVertical_bias="0.034" />
 
+
     <EditText
         android:id="@+id/id_m3_edittxt2"
         android:layout_width="0dp"
@@ -65,8 +66,8 @@
         android:background="@drawable/an_cjt_1"
         android:elevation="15dp"
         android:ems="10"
+        android:inputType="textEmailAddress"
         android:hint="@string/m3_edittxt2"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -89,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/id_m3_edittxt2"
         app:layout_constraintVertical_bias="0.054" />
 
+
     <EditText
         android:id="@+id/id_m3_edittxt3"
         android:layout_width="0dp"
@@ -100,7 +102,7 @@
         android:elevation="15dp"
         android:ems="10"
         android:hint="@string/m3_edittxt3"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
