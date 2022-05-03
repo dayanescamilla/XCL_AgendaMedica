@@ -30,6 +30,7 @@ public class modulo_registro extends AppCompatActivity {
     FirebaseAuth cAuth;
     FirebaseFirestore cFirestore;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,7 @@ public class modulo_registro extends AppCompatActivity {
                 String correoUsuario = correo.getText().toString().trim();
                 String contraUsuario = contra.getText().toString().trim();
                 
-                if (nombreUsuario.isEmpty() && correoUsuario.isEmpty() && contraUsuario.isEmpty()){
+                if (nombreUsuario.isEmpty() || correoUsuario.isEmpty() || contraUsuario.isEmpty()){
                     Toast.makeText(modulo_registro.this, "Completar los datos solicitados", Toast.LENGTH_SHORT).show();
                 }else {
                     Registro(nombreUsuario, correoUsuario, contraUsuario);
@@ -90,7 +91,7 @@ public class modulo_registro extends AppCompatActivity {
     }).addOnFailureListener(new OnFailureListener() {
         @Override
         public void onFailure(@NonNull Exception e) {
-            Toast.makeText(modulo_registro.this, "Error al guardar los datos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(modulo_registro.this, "Errorrrr", Toast.LENGTH_SHORT).show();
         }
     });
     }
