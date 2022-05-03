@@ -91,10 +91,12 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker timePicker, int hour_OfDay, int minute) {
-                    eHora.setText(hour_OfDay+":"+minute);
+                    eHora.setText(hour_OfDay+":00");
                 }
             },hora,min,false);
             timePickerDialog.show();
         }
     }
+
+
 }

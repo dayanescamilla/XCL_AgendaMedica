@@ -90,7 +90,7 @@ public class Dashboard extends Fragment {
                 alertAgendar.setTitle("Filtro de Preguntas");
                 alertAgendar.setMessage("Para poder agendar una cita medica se necesita responder un cuestionario muy simple.");
         //METODO DE ACCION POSITIVA
-                alertAgendar.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                alertAgendar.setPositiveButton("ENTENDIDO", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent i2 = new Intent(getActivity(),filtro_reguntas.class);
@@ -98,7 +98,7 @@ public class Dashboard extends Fragment {
                     }
                 });
         //METODO DE ACCION NEGATIVA
-                alertAgendar.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                alertAgendar.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(getContext(), "Se cancelo la cita medica", Toast.LENGTH_SHORT).show();

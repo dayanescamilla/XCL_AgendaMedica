@@ -54,13 +54,13 @@
         <activity
             android:name=".modulo_registro"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Agendar"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
