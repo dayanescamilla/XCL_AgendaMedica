@@ -3,7 +3,10 @@ package com.example.xcl_agendamedica;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +39,6 @@ public class modulo_registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modulo_registro);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
-        this.setTitle("Registro"); //TITULO MOSTRADO EN ACTION BAR
         
         cFirestore = FirebaseFirestore.getInstance();
         cAuth = FirebaseAuth.getInstance();
@@ -45,6 +47,7 @@ public class modulo_registro extends AppCompatActivity {
         correo = findViewById(R.id.id_m3_edittxt2);
         contra = findViewById(R.id.id_m3_edittxt3);
         agregarRegistro = findViewById(R.id.id_m3_btn1);
+        casillaEdad = findViewById(R.id.id_m3_checkBox1);
 
 
         
@@ -54,15 +57,31 @@ public class modulo_registro extends AppCompatActivity {
                 String nombreUsuario = nombre.getText().toString().trim();
                 String correoUsuario = correo.getText().toString().trim();
                 String contraUsuario = contra.getText().toString().trim();
+
+
                 
-                if (nombreUsuario.isEmpty() || correoUsuario.isEmpty() || contraUsuario.isEmpty()){
+                if (nombreUsuario.isEmpty() || correoUsuario.isEmpty() || contraUsuario.isEmpty() || !casillaEdad.isChecked()){
                     Toast.makeText(modulo_registro.this, "Completar los datos solicitados", Toast.LENGTH_SHORT).show();
-                }else {
+                }else{
                     Registro(nombreUsuario, correoUsuario, contraUsuario);
                 }
+
+                if (error());
             }
         });
     }
+
+    //casilla de checkbox
+    private boolean error() {
+        if(!casillaEdad.isChecked()){
+            Toast.makeText(modulo_registro.this, "Por favor selecciona si eres mayor de edad", Toast.LENGTH_LONG).show();
+            return  false;
+        }
+        return true;
+    }
+
+
+
 
     private void Registro(String nombreUsuario, String correoUsuario, String contraUsuario) {
     cAuth.createUserWithEmailAndPassword(correoUsuario, contraUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -81,6 +100,7 @@ public class modulo_registro extends AppCompatActivity {
                 public void onSuccess(Void unused) {
 
                     Toast.makeText(modulo_registro.this, "Se registro con exito", Toast.LENGTH_SHORT).show();
+
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -92,9 +112,10 @@ public class modulo_registro extends AppCompatActivity {
     }).addOnFailureListener(new OnFailureListener() {
         @Override
         public void onFailure(@NonNull Exception e) {
-            Toast.makeText(modulo_registro.this, "Errorrrr", Toast.LENGTH_SHORT).show();
+            Toast.makeText(modulo_registro.this, "Error", Toast.LENGTH_SHORT).show();
         }
     });
     }
+
 
 }
