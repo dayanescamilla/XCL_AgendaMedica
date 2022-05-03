@@ -7,6 +7,8 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -78,6 +80,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
                     eFecha.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
                 }
             },dia,mes,year);
+            datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() -1000); //NO SE PODRAN ELEGIR FECHAS PASADAS A LA ACTUAL
             datePickerDialog.show();
         }
         if (view == btnHora){
