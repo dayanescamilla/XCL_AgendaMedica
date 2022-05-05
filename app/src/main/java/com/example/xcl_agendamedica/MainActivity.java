@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //LLAMAR A ACTIVITY LOGIN DESDE ACTIVITY MAINACTIVITY
-        id_m1_btn1 = (Button)findViewById(R.id.id_m1_btn1);
+        id_m1_btn1 = findViewById(R.id.id_m1_btn1);
         id_m1_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,Login.class);
-                startActivity(i);
+                Intent ilogin = new Intent(MainActivity.this,Login.class);
+                startActivity(ilogin);
             }
         });
     }

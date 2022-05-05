@@ -26,7 +26,7 @@
         <activity
             android:name=".Ayuda"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
@@ -36,19 +36,19 @@
         <activity
             android:name=".Documentos"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Acerca"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".encuesta"
             android:exported="false"
-            android:parentActivityName=".menu"
+            android:parentActivityName=".MenuPrincipal"
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
@@ -64,11 +64,11 @@
             android:theme="@style/Theme.XCL_AgendaMedica2"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Login"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Login"
             android:exported="true"
             android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
