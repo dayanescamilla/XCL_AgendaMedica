@@ -49,7 +49,7 @@
             android:name=".encuesta"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
+            android:theme="@style/Theme.XCL_AgendaMedica"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".modulo_registro"
@@ -61,15 +61,16 @@
             android:name=".Agendar"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
+
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Login"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
+
             android:screenOrientation="portrait"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

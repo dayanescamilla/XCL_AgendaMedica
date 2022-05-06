@@ -34,6 +34,7 @@ public class modulo_registro extends AppCompatActivity {
     FirebaseFirestore cFirestore;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,6 @@ public class modulo_registro extends AppCompatActivity {
         agregarRegistro = findViewById(R.id.id_m3_btn1);
         casillaEdad = findViewById(R.id.id_m3_checkBox1);
 
-
         
         agregarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +59,13 @@ public class modulo_registro extends AppCompatActivity {
                 String contraUsuario = contra.getText().toString().trim();
 
 
-                
                 if (nombreUsuario.isEmpty() || correoUsuario.isEmpty() || contraUsuario.isEmpty() || !casillaEdad.isChecked()){
                     Toast.makeText(modulo_registro.this, "Completar los datos solicitados", Toast.LENGTH_SHORT).show();
                 }else{
                     Registro(nombreUsuario, correoUsuario, contraUsuario);
                 }
 
+                //casilla checkbox
                 if (error());
             }
         });

@@ -3,6 +3,7 @@ package com.example.xcl_agendamedica;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -10,9 +11,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.concurrent.Executor;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,8 +31,12 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Perfil extends Fragment {
 
     Button btnEdit, btnSalir;
+    TextView usernombre, usercorreo, usertelefono, useremergencia;
     View vista;
+    FirebaseFirestore cFirestore;
     FirebaseAuth cAuth;
+    // variable usuario
+    String idUser;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +67,7 @@ public class Perfil extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -63,17 +77,30 @@ public class Perfil extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        cAuth = FirebaseAuth.getInstance();
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
+        // intancias de firestore
+        cAuth = FirebaseAuth.getInstance();
+        cFirestore = FirebaseFirestore.getInstance();
+        //obtener id
+        idUser = cAuth.getCurrentUser().getUid();
+
+        // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_perfil, container, false);
         btnEdit = vista.findViewById(R.id.id_m12_btn1);
         btnSalir = vista.findViewById(R.id.id_m12_btn2);
+
+        //txt donde se guardaran los datos
+        usernombre = vista.findViewById(R.id.id_m12_cjt1);
+        usercorreo = vista.findViewById(R.id.id_m12_cjt2);
+        usertelefono = vista.findViewById(R.id.id_m12_cjt3);
+        useremergencia= vista.findViewById(R.id.id_m12_cjt4);
+
 
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
