@@ -60,8 +60,8 @@
         <activity
             android:name=".Agendar"
             android:exported="false"
+            android:theme="@style/Theme.XCL_AgendaMedica2"
             android:parentActivityName=".MenuPrincipal"
-
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Login"

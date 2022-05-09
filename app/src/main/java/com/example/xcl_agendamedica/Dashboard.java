@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -13,8 +14,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,6 +36,7 @@ public class Dashboard extends Fragment {
     ViewFlipper vflipper;
     CardView cardAgendar,cardAcerca,cardAyuda,cardDocumentos;
     View vista;
+    TextView nombreUsuario;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,16 +82,21 @@ public class Dashboard extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        //IMAGEVIEW
+        int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
+        vflipper = vista.findViewById(R.id.v_flipper);
+        //CARDVIEW
         cardAgendar = vista.findViewById(R.id.cardViewAgendar);
         cardAcerca = vista.findViewById(R.id.cardViewAcerca);
         cardAyuda = vista.findViewById(R.id.cardViewAyuda);
-       // cardDocumentos = vista.findViewById(R.id.cardViewDocumentos);
+        //TEXTOS
+        nombreUsuario = vista.findViewById(R.id.id_m4_sub2);
+
 
         //MOSTRAR ALERTA DE DIALOGO
         cardAgendar.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +123,6 @@ public class Dashboard extends Fragment {
                 alertAgendar.show();
             }
         });
-
         //DIRIGIRSE A MODULO ACERCA DE
         cardAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +131,6 @@ public class Dashboard extends Fragment {
                 getActivity().startActivity(i);
             }
         });
-
         //DIRIGIRSE A MODULO AYDUA
         cardAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,23 +140,13 @@ public class Dashboard extends Fragment {
             }
         });
 
-      /*  cardDocumentos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(),Documentos.class);
-                getActivity().startActivity(i);
-            }
-        }); */
 
 
-        int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
-        vflipper = vista.findViewById(R.id.v_flipper);
+
         //SENTENTICA DE VALIDACION CARRUSEL
         for (int image : images) {
             flipperImages(image);
         }
-
-
         return vista;
     }
 
@@ -158,4 +162,5 @@ public class Dashboard extends Fragment {
         vflipper.setInAnimation(getActivity(), android.R.anim.slide_in_left);
         vflipper.setOutAnimation(getActivity(), android.R.anim.slide_out_right);
     }
+
 }
