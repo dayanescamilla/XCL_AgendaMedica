@@ -162,6 +162,7 @@
     <string name="m12_btn2">Salir</string>
 
     <!-- 13. Fragment Perfil de usuario -->
+    <string name="m13_tit1">Editar perfil</string>
     <string name="m13_txt1">Nombre:</string>
     <string name="m13_txt2">Correo electronico:</string>
     <string name="m13_txt3">Teléfono:</string>

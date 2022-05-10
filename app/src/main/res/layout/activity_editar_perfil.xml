@@ -182,7 +182,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/m1_tit1"
+        android:text="@string/m13_tit1"
         android:textColor="@color/TextosBlanco"
         android:textSize="@dimen/dimTitulos"
         android:textStyle="bold"
