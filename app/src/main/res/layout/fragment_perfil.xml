@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/m12_cjt4"
                     android:textSize="@dimen/dimDescripicon" />
-
+<!--
                 <TextView
                     android:id="@+id/id_m12_txt5"
                     android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/m12_cjt6"
-                    android:textSize="@dimen/dimDescripicon" />
+                    android:textSize="@dimen/dimDescripicon" /> -->
             </LinearLayout>
         </ScrollView>
 
