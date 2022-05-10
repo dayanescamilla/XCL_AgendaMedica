@@ -34,11 +34,12 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
     Button btnFecha, btnHora, btnAgendar;
     EditText eFecha, eHora, eNombre, eEdad, eRazon;
     RadioButton rdPareja, rdIndividual, rdFamiliar, rdPresencial, rdVirtual;
+    //CALENDARIO
     private int dia, mes, year, hora, min;
+    //BASE DE DATOS
     FirebaseAuth cAuth;
     FirebaseFirestore cFirestore;
-
-
+    //BARRA DE CARGA
     ProgressDialog barraCargando;
 
     @Override

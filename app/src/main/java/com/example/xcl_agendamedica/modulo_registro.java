@@ -32,25 +32,30 @@ public class modulo_registro extends AppCompatActivity {
     CheckBox casillaEdad;
     FirebaseAuth cAuth;
     FirebaseFirestore cFirestore;
-
-
+    //BARRA DE CARGA
+    ProgressDialog barraCargando;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modulo_registro);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
-        
+
+        //BASE DE DATOS
         cFirestore = FirebaseFirestore.getInstance();
         cAuth = FirebaseAuth.getInstance();
-        
+        //EDITTEXT
         nombre = findViewById(R.id.id_m3_edittxt1);
         correo = findViewById(R.id.id_m3_edittxt2);
         contra = findViewById(R.id.id_m3_edittxt3);
+        //BUTTON
         agregarRegistro = findViewById(R.id.id_m3_btn1);
+        //CHECKBOX
         casillaEdad = findViewById(R.id.id_m3_checkBox1);
+        //BARRA DE ALERTA
+        barraCargando = new ProgressDialog(this);
 
-        
+        //AGREGAR DATOS DE USUARIO MEDIANTE BOTON
         agregarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,20 +63,19 @@ public class modulo_registro extends AppCompatActivity {
                 String correoUsuario = correo.getText().toString().trim();
                 String contraUsuario = contra.getText().toString().trim();
 
-
                 if (nombreUsuario.isEmpty() || correoUsuario.isEmpty() || contraUsuario.isEmpty() || !casillaEdad.isChecked()){
                     Toast.makeText(modulo_registro.this, "Completar los datos solicitados", Toast.LENGTH_SHORT).show();
                 }else{
                     Registro(nombreUsuario, correoUsuario, contraUsuario);
                 }
 
-                //casilla checkbox
+                //CASILLA CHECKBOX
                 if (error());
             }
         });
     }
 
-    //casilla de checkbox
+    //METODO CASILLA CHECKBOX
     private boolean error() {
         if(!casillaEdad.isChecked()){
             Toast.makeText(modulo_registro.this, "Por favor selecciona si eres mayor de edad", Toast.LENGTH_LONG).show();
@@ -80,10 +84,12 @@ public class modulo_registro extends AppCompatActivity {
         return true;
     }
 
-
-
-
+    //METODO PARA AGREGAR DATOS DE REGISTRO
     private void Registro(String nombreUsuario, String correoUsuario, String contraUsuario) {
+        barraCargando.setTitle("Cargando");
+        barraCargando.setMessage("Verificando datos");
+        barraCargando.show();
+
     cAuth.createUserWithEmailAndPassword(correoUsuario, contraUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -98,13 +104,14 @@ public class modulo_registro extends AppCompatActivity {
             cFirestore.collection("Usuarios").document(id).set(Map1).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-
+                    barraCargando.dismiss();
                     Toast.makeText(modulo_registro.this, "Se registro con exito", Toast.LENGTH_SHORT).show();
 
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
+                    barraCargando.dismiss();
                     Toast.makeText(modulo_registro.this, "Error al guardar sus datos", Toast.LENGTH_SHORT).show();
                 }
             });

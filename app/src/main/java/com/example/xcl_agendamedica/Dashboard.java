@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -34,25 +35,24 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Dashboard extends Fragment {
 
     ViewFlipper vflipper;
-    CardView cardAgendar,cardAcerca,cardAyuda,cardDocumentos;
+    CardView cardAgendar,cardAcerca,cardAyuda;
     View vista;
-    TextView nombreUsuario;
+    TextView nameUsuario;
+    //BASE DE DATOS
+    FirebaseFirestore cFirestore;
+    FirebaseUser cUser;
+    DocumentReference documentReference;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     public Dashboard() {
         // Required empty public constructor
-
-
     }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -70,8 +70,6 @@ public class Dashboard extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +78,6 @@ public class Dashboard extends Fragment {
            mParam2 = getArguments().getString(ARG_PARAM2);
        }
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -95,7 +92,26 @@ public class Dashboard extends Fragment {
         cardAcerca = vista.findViewById(R.id.cardViewAcerca);
         cardAyuda = vista.findViewById(R.id.cardViewAyuda);
         //TEXTOS
-        nombreUsuario = vista.findViewById(R.id.id_m4_sub2);
+        nameUsuario = vista.findViewById(R.id.id_m4_sub2);
+        //BASE DE DATOS
+        cUser = FirebaseAuth.getInstance().getCurrentUser();
+        String ID = cUser.getUid();
+        cFirestore = FirebaseFirestore.getInstance();
+
+        documentReference = cFirestore.collection("Usuarios").document(ID);
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.getResult().exists()){
+                    String nombreUsuario = task.getResult().getString("Nombre del usuario");
+
+                    nameUsuario.setText(nombreUsuario);
+                } else {
+                    Toast.makeText(getContext(), "Error, revisa tu conexion a internet", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
 
         //MOSTRAR ALERTA DE DIALOGO
@@ -105,7 +121,7 @@ public class Dashboard extends Fragment {
                 AlertDialog.Builder alertAgendar = new AlertDialog.Builder(getContext());
                 alertAgendar.setTitle("Filtro de Preguntas");
                 alertAgendar.setMessage("Para poder agendar una cita medica se necesita responder un cuestionario muy simple.");
-        //METODO DE ACCION POSITIVA
+                //METODO DE ACCION POSITIVA
                 alertAgendar.setPositiveButton("ENTENDIDO", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -113,7 +129,8 @@ public class Dashboard extends Fragment {
                         getActivity().startActivity(i2);
                     }
                 });
-        //METODO DE ACCION NEGATIVA
+
+                //METODO DE ACCION NEGATIVA
                 alertAgendar.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -123,6 +140,7 @@ public class Dashboard extends Fragment {
                 alertAgendar.show();
             }
         });
+
         //DIRIGIRSE A MODULO ACERCA DE
         cardAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +149,7 @@ public class Dashboard extends Fragment {
                 getActivity().startActivity(i);
             }
         });
+
         //DIRIGIRSE A MODULO AYDUA
         cardAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,16 +159,12 @@ public class Dashboard extends Fragment {
             }
         });
 
-
-
-
         //SENTENTICA DE VALIDACION CARRUSEL
         for (int image : images) {
             flipperImages(image);
         }
         return vista;
     }
-
     public void flipperImages(int image){
         ImageView imageView = new ImageView(getActivity());
         imageView.setBackgroundResource(image);
@@ -157,7 +172,6 @@ public class Dashboard extends Fragment {
         vflipper.addView(imageView);
         vflipper.setFlipInterval(3000);
         vflipper.setAutoStart(true);
-
         //ACTIVAR ANIMACION DE CARRUSEL
         vflipper.setInAnimation(getActivity(), android.R.anim.slide_in_left);
         vflipper.setOutAnimation(getActivity(), android.R.anim.slide_out_right);
