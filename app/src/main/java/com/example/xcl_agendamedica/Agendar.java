@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -122,7 +123,8 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 barraCargando.dismiss();
-                Toast.makeText(Agendar.this, "Se agrego la cita", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(android.R.id.content), "Se agrego la cita", Snackbar.LENGTH_SHORT).show();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
