@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.UUID;
 
 public class Documentos extends AppCompatActivity {
 
@@ -76,15 +79,15 @@ public class Documentos extends AppCompatActivity {
         pd.setMessage("Se esta subiendo su archivo, espere un momento por favor");
         pd.show();
 
-        final String id = cAuth.getCurrentUser().getUid();
-        StorageReference riversRef = storageReference.child("images/" + id);
+        final String randomKey = UUID.randomUUID().toString();
+        StorageReference riversRef = storageReference.child("images/" + randomKey);
 
         riversRef.putFile(imageUr)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         pd.dismiss();
-                        Snackbar.make(findViewById(android.R.id.content),"Imagen subida", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(findViewById(android.R.id.content),"Imagen subida", Snackbar.LENGTH_LONG).setTextColor(Color.WHITE).setBackgroundTint(Color.BLUE).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override

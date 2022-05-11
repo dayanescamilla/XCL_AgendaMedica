@@ -11,6 +11,7 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_btn_nav.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/an_cjt_1.xml" value="0.1655" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ef_ripple.xml" value="0.1915" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/errorbtn.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/fondo1.xml" value="0.1655" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ic_logo_xolotl.xml" value="0.2095" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_1.xml" value="0.1655" />
@@ -28,6 +29,7 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_menu.xml" value="0.14" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_menu_principal.xml" value="0.12" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_modulo_registro.xml" value="0.17" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/alertdialog.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_encuesta_satisfaccion.xml" value="0.1361111111111111" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_fragmento_dashboard.xml" value="0.18" />
@@ -35,16 +37,14 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_salir.xml" value="0.1267361111111111" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/menu/boton_navegacion.xml" value="0.10208333333333333" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_agendar.xml" value="0.25" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_documentos.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_editar_perfil.xml" value="0.2" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_encuesta.xml" value="0.25" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_filtro_reguntas.xml" value="0.25" />
+        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_filtro_reguntas.xml" value="0.16047144152311876" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_login.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_menu_principal.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_modulo_registro.xml" value="0.22" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_dashboard.xml" value="0.18" />
-        <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_encuesta_satisfaccion.xml" value="0.25" />
         <entry key="..\:/Users/jesus/StudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
       </map>
     </option>
