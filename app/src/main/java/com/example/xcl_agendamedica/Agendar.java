@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
     Button btnFecha, btnHora, btnAgendar;
     EditText eFecha, eHora, eNombre, eEdad, eRazon;
     RadioButton rdPareja, rdIndividual, rdFamiliar, rdPresencial, rdVirtual;
+    RadioGroup rdGroupUno, rdGroupDos;
     //CALENDARIO
     private int dia, mes, year, hora, min;
     //BASE DE DATOS
@@ -65,6 +67,11 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         rdPareja = findViewById(R.id.id_m5_rdb1);
         rdIndividual = findViewById(R.id.id_m5_rdb2);
         rdFamiliar = findViewById(R.id.id_m5_rdb3);
+        rdPresencial = findViewById(R.id.id_m5_rdb4);
+        rdVirtual = findViewById(R.id.id_m5_rdb5);
+        //RADIGROUPS
+        rdGroupUno = findViewById(R.id.radioGroupUno);
+        rdGroupDos = findViewById(R.id.radioGroupDos);
         //BUTTONS
         btnAgendar = findViewById(R.id.id_m5_btn1);
         btnFecha = findViewById(R.id.id_m5_btn3);
@@ -82,29 +89,30 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
                 String Nombre = eNombre.getText().toString().trim();
                 String Edad = eEdad.getText().toString().trim();
                 String Razon = eRazon.getText().toString().trim();
-                /*String Pareja = rdPareja.getText().toString();
+                String Pareja = rdPareja.getText().toString();
                 String Individual = rdIndividual.getText().toString();
                 String Familiar = rdFamiliar.getText().toString();
                 String Presencial = rdPresencial.getText().toString();
-                String Virtual = rdVirtual.getText().toString(); */
+                String Virtual = rdVirtual.getText().toString();
 
 
-                if (Fecha.isEmpty() && Hora.isEmpty() && Nombre.isEmpty() && Edad.isEmpty() && Razon.isEmpty() /* && (Pareja.isEmpty() || Individual.isEmpty() || Familiar.isEmpty()) && (Presencial.isEmpty() || Virtual.isEmpty()) */ ){
+                if (Fecha.isEmpty() && Hora.isEmpty() && Nombre.isEmpty() && Edad.isEmpty() && Razon.isEmpty() /*&& (Presencial.isEmpty() || Virtual.isEmpty()) */ ){
                     Toast.makeText(Agendar.this, "Llenar todos los campos", Toast.LENGTH_SHORT).show();
                 }else {
-                    agendarCita(Fecha, Hora, Nombre, Edad, Razon /*, Pareja, Individual, Familiar, Presencial, Virtual*/);
+                    agendarCita(Fecha, Hora, Nombre, Edad, Razon, Presencial, Virtual, Pareja, Individual, Familiar);
                 }
 
             }
         });
     }
 
-    private void agendarCita(String fecha, String hora, String nombre, String edad, String razon /*, String pareja, String individual, String familiar, String presencial, String virtual */) {
+    private void agendarCita(String fecha, String hora, String nombre, String edad, String razon, String presencial, String virtual, String pareja, String individual, String familiar) {
         barraCargando.setTitle("Cargando");
         barraCargando.setMessage("Tu cita esta siendo procesada");
         barraCargando.show();
 
         String id = cAuth.getCurrentUser().getUid();
+
 
         Map<String,Object> citas = new HashMap<>();
         citas.put("Fecha", fecha);
@@ -112,11 +120,20 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         citas.put("Nombre", nombre);
         citas.put("Edad", edad);
         citas.put("Razon", razon);
-       /* citas.put("Tipo de Servicio", pareja);
-        citas.put("Tipo de Servicio", individual);
-        citas.put("Tipo de Servicio", familiar);
-        citas.put("Tipo de Consulta", presencial);
-        citas.put("Tipo de Consulta", virtual); */
+        if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb1){
+            citas.put("Tipo de servicio que solicita", pareja);
+        } if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb2){
+            citas.put("Tipo de servicio que solicita", individual);
+        }else {
+            citas.put("Tipo de servicio que solicita", familiar);
+        }
+
+        if (rdGroupDos.getCheckedRadioButtonId() == R.id.id_m5_rdb4){
+            citas.put("Tipo de consulta", presencial);
+        } else {
+            citas.put("Tipo de consulta", virtual);
+        }
+
 
 
         cFirestore.collection("Cita Medica").document(id).set(citas).addOnCompleteListener(new OnCompleteListener<Void>() {
