@@ -34,7 +34,7 @@
     <!-- 4.Modulo de menu principal -->
     <string name="m4_tit1">Hola,</string>
     <string name="m4_sub1">Bienvenido</string>
-    <string name="m4_sub2">Nombre</string>
+    <string name="m4_sub2">(…, &#8230;) ?</string>
     <string name="m4_txt1">Agendar cita</string>
     <string name="m4_txt2">Ayuda</string>
     <string name="m4_txt3">Acerca de</string>
@@ -176,9 +176,13 @@
     <string name="m13_btn3">Cambiar foto de perfil</string>
 
 
+    <!-- Content Description -->
     <string name="con_des1">ImageOne</string>
     <string name="con_des2">ImagePDF</string>
     <string name="con_des3">ImagePerfil</string>
     <string name="con_des4">ImageBienvenida</string>
+    <!-- Acerca de -->
+    <string name="con_des5">id_wave_3</string>
+    id_wave_3
 
 </resources>
