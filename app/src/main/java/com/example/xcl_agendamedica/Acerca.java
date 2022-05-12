@@ -41,18 +41,18 @@ public class Acerca extends AppCompatActivity {
         this.setTitle("Acerca de"); //TITULO MOSTRADO EN ACTION BAR
 
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+       /* FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id = user.getUid();
         DocumentReference reference;
 
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
 
-        textoUno = findViewById(R.id.id_m7_tit1);
+        textoUno = findViewById(R.id.id_m7_tit1);*/
 
        // databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios");
 
-        reference = firestore.collection("Usuarios").document(id);
+        /*reference = firestore.collection("Usuarios").document(id);
 
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -66,7 +66,7 @@ public class Acerca extends AppCompatActivity {
                 }
             }
         });
-
+*/
    /*     databaseReference.child(User.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

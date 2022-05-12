@@ -120,6 +120,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         citas.put("Nombre", nombre);
         citas.put("Edad", edad);
         citas.put("Razon", razon);
+
         if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb1){
             citas.put("Tipo de servicio que solicita", pareja);
         } if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb2){

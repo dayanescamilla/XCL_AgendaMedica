@@ -68,7 +68,6 @@ public class modulo_registro extends AppCompatActivity {
                 }else{
                     Registro(nombreUsuario, correoUsuario, contraUsuario);
                 }
-
                 //CASILLA CHECKBOX
                 if (error());
             }
@@ -106,7 +105,6 @@ public class modulo_registro extends AppCompatActivity {
                 public void onSuccess(Void unused) {
                     barraCargando.dismiss();
                     Toast.makeText(modulo_registro.this, "Se registro con exito", Toast.LENGTH_SHORT).show();
-
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -123,6 +121,4 @@ public class modulo_registro extends AppCompatActivity {
         }
     });
     }
-
-
 }

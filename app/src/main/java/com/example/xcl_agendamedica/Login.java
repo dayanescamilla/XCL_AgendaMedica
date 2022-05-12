@@ -76,7 +76,7 @@ public class Login extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Login.this, "Verfique sus datos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Login.this, "Verifique sus datos", Toast.LENGTH_SHORT).show();
             }
         });
     }
