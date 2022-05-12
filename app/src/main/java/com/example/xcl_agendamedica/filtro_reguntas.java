@@ -61,7 +61,7 @@ public class filtro_reguntas extends AppCompatActivity {
     public void showAlertDialog(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Lo sentimos mucho");
-        alert.setMessage("No calificas para poder realizar una cita medica, para saber mas acerca de este problema comunicate a este correo electronico asdfghjkl@gmail.com");
+        alert.setMessage("No calificas para poder realizar una cita medica, para saber mas acerca de este problema comunicate con la clínica");
         alert.setPositiveButton("ENTENDIDO", new DialogInterface.OnClickListener() { //ESTABLECER BOTON POSITIVO
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

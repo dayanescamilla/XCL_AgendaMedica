@@ -98,6 +98,7 @@ public class Dashboard extends Fragment {
         String ID = cUser.getUid();
         cFirestore = FirebaseFirestore.getInstance();
 
+        //Mandar a llamar el nombre del usuario para mostrar
         documentReference = cFirestore.collection("Usuarios").document(ID);
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override

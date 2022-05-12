@@ -19,11 +19,14 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class Documentos extends AppCompatActivity {
@@ -53,6 +56,7 @@ public class Documentos extends AppCompatActivity {
             public void onClick(View view) {
                 choosePicture();
             }
+
         });
     }
 
@@ -90,13 +94,14 @@ public class Documentos extends AppCompatActivity {
                         Snackbar.make(findViewById(android.R.id.content),"Imagen subida", Snackbar.LENGTH_LONG).setTextColor(Color.WHITE).setBackgroundTint(Color.BLUE).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                pd.dismiss();
-                Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
-            }
+                @Override
+                public void onFailure (@NonNull Exception e){
+                    pd.dismiss();
+                    Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                }
         });
     }
+
    /* public void realtime(View view){
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
