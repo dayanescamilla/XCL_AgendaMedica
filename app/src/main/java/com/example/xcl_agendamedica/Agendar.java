@@ -2,14 +2,12 @@ package com.example.xcl_agendamedica;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +21,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -33,6 +30,9 @@ import java.util.Map;
 
 public class Agendar extends AppCompatActivity implements View.OnClickListener {
 
+    //REFERENCIAR DATOS
+
+    //BOTONES, EDITTEXT, RADIOBUTTON, RADIOGROUP
     Button btnFecha, btnHora, btnAgendar;
     EditText eFecha, eHora, eNombre, eEdad, eRazon;
     RadioButton rdPareja, rdIndividual, rdFamiliar, rdPresencial, rdVirtual;
@@ -51,6 +51,8 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_agendar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
         this.setTitle("Agendar Cita"); //TITULO MOSTRADO EN ACTION BAR
+
+        //INSTANCIAR DATOS
 
         //FIREBASE
         cFirestore = FirebaseFirestore.getInstance();
@@ -80,7 +82,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
 
-
+        //FUNCION DE BOTON
         btnAgendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,9 +98,10 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
                 String Virtual = rdVirtual.getText().toString();
 
 
-                if (Fecha.isEmpty() && Hora.isEmpty() && Nombre.isEmpty() && Edad.isEmpty() && Razon.isEmpty() /*&& (Presencial.isEmpty() || Virtual.isEmpty()) */ ){
-                    Toast.makeText(Agendar.this, "Llenar todos los campos", Toast.LENGTH_SHORT).show();
-                }else {
+                //CONDICION IF PARA SABER SI LOS CAMPOS ESTAN VACIOS DE LO CONTRARIO LLAMARA A LA FUNCION
+                if (Fecha.isEmpty() || Hora.isEmpty()  || Nombre.isEmpty()  || Edad.isEmpty() || Razon.isEmpty()){
+                    Toast.makeText(Agendar.this, "Completar los campos solicitados.", Toast.LENGTH_LONG).show();
+                } else {
                     agendarCita(Fecha, Hora, Nombre, Edad, Razon, Presencial, Virtual, Pareja, Individual, Familiar);
                 }
 
@@ -106,13 +109,14 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         });
     }
 
+    //METODO PARA AGREGAR LOS DATOS A LA BASE DE DATOS
     private void agendarCita(String fecha, String hora, String nombre, String edad, String razon, String presencial, String virtual, String pareja, String individual, String familiar) {
+        //PREOGRESS DIALOG
         barraCargando.setTitle("Cargando");
         barraCargando.setMessage("Tu cita esta siendo procesada");
         barraCargando.show();
 
         String id = cAuth.getCurrentUser().getUid();
-
 
         Map<String,Object> citas = new HashMap<>();
         citas.put("Fecha", fecha);
@@ -121,6 +125,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         citas.put("Edad", edad);
         citas.put("Razon", razon);
 
+        //CONDICION RADIOBUTTONS
         if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb1){
             citas.put("Tipo de servicio que solicita", pareja);
         } if (rdGroupUno.getCheckedRadioButtonId() == R.id.id_m5_rdb2){
@@ -135,27 +140,25 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             citas.put("Tipo de consulta", virtual);
         }
 
-
-
+        //AGREGAR A COLLECION DE BASE DE DATOS FIREBASE MEDIANTE ID DEL USUARIO
         cFirestore.collection("Cita Medica").document(id).set(citas).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 barraCargando.dismiss();
-                Snackbar.make(findViewById(android.R.id.content), "Se agrego la cita", Snackbar.LENGTH_SHORT).show();
-
+                Intent citaAgregada = new Intent(Agendar.this,MenuPrincipal.class);
+                startActivity(citaAgregada);
+                Toast.makeText(Agendar.this,"Se agregó tu cita médica con éxito.", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 barraCargando.dismiss();
-                Toast.makeText(Agendar.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Agendar.this,"Error al agendar tu cita medica", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
-
-    //DIALOGO DE ALERTA BOTON CANCELAR
+    //DIALOGO DE ALERTA BOTON CANCELAR MEDIANTE ONCLICK
     public void showAlertDialog(View view){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Cancelar Cita");
@@ -163,20 +166,21 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         alert.setPositiveButton("SI", new DialogInterface.OnClickListener() { //ESTABLECER BOTON POSITIVO
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent i2 = new Intent(Agendar.this,MenuPrincipal.class);
-                startActivity(i2);
-
+                Intent cancelarCita = new Intent(Agendar.this,MenuPrincipal.class);
+                startActivity(cancelarCita);
+                Toast.makeText(Agendar.this,"Se cancelo tu cita", Toast.LENGTH_SHORT).show();
             }
         });
         alert.setNegativeButton("NO", new DialogInterface.OnClickListener() { //ESTABLECER BOTON NEGATIVO
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(Agendar.this,"Continua agendado tu cita medica", Toast.LENGTH_SHORT).show();
+
             }
         });
         alert.create().show(); //MOSTRAR ALERTA
     }
 
+    //FUNCION PARA AGREGAR FECHA MEDIANTE DATAPICKERDIALOG
     @Override
     public void onClick(View view) {
         if (view == btnFecha){
@@ -195,6 +199,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() -1000); //NO SE PODRAN ELEGIR FECHAS PASADAS A LA ACTUAL
             datePickerDialog.show();
         }
+        //FUNCION PARA AGREGAR HORA MEDIANTE TIMEPICKERDIALOG
         if (view == btnHora){
             final Calendar c = Calendar.getInstance();
             hora = c.get(Calendar.HOUR_OF_DAY);
@@ -209,8 +214,4 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             timePickerDialog.show();
         }
     }
-
-
-
-
 }
