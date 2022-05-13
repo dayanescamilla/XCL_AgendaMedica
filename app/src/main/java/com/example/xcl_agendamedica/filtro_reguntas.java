@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 
 public class filtro_reguntas extends AppCompatActivity {
 
+    //REFERENCIAR DATOS
     Button btnEnivar, btnCancelar;
     RadioGroup grupoUno;
     RadioButton siUno, noUno, siDos, noDos, siTres, noTres, siCuatro, noCuatro;
@@ -22,8 +23,12 @@ public class filtro_reguntas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtro_reguntas);
 
+        //INSTANCIAR
+
+        //BOTONES
         btnEnivar = findViewById(R.id.id_m9_btn1);
         btnCancelar = findViewById(R.id.id_m9_btn2);
+        //RADIOBUTTONS
         siUno = findViewById(R.id.id_m9_rd1);
         noUno = findViewById(R.id.id_m9_rd2);
         siDos = findViewById(R.id.id_m9_rd3);
@@ -38,18 +43,16 @@ public class filtro_reguntas extends AppCompatActivity {
         btnEnivar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (noUno.isChecked() && noDos.isChecked() && (noTres.isChecked() || siTres.isChecked())  && noCuatro.isChecked()){
+                if (noUno.isChecked() && noDos.isChecked() && (noTres.isChecked() || siTres.isChecked())  && noCuatro.isChecked()){  //VERIFICAR LAS CASILLAS
                     Intent enviardatos = new Intent(filtro_reguntas.this,Agendar.class);
                     startActivity(enviardatos);
                 }else {
-                   // finish();
-                    //startActivity(new Intent(filtro_reguntas.this,MenuPrincipal.class));
                     showAlertDialog();
-                  // Toast.makeText(filtro_reguntas.this, "No puedes agendar una cita medica", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+        //BOTON CANCELAR DIRIGIRSE A MENU PRINCIPAL
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +61,8 @@ public class filtro_reguntas extends AppCompatActivity {
             }
         });
     }
+
+    //DIALOGO DE ALERTA
     public void showAlertDialog(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Lo sentimos mucho");
