@@ -34,6 +34,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
  */
 public class Dashboard extends Fragment {
 
+    //REFERENCIAR DATOS
+
+    //VIEWFLIPPER, CARDVIEW, VIEW, TEXTVIEW
     ViewFlipper vflipper;
     CardView cardAgendar,cardAcerca,cardAyuda;
     View vista;
@@ -84,6 +87,9 @@ public class Dashboard extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        //INSTANCIAR DATOS
+
         //IMAGEVIEW
         int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
         vflipper = vista.findViewById(R.id.v_flipper);
@@ -98,22 +104,19 @@ public class Dashboard extends Fragment {
         String ID = cUser.getUid();
         cFirestore = FirebaseFirestore.getInstance();
 
-        //Mandar a llamar el nombre del usuario para mostrar
+        //MOSTRAR EL NOMBRE DE USUARIO MEDIANTE EL ID ALMACENADO EN LA COLLECCION
         documentReference = cFirestore.collection("Usuarios").document(ID);
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.getResult().exists()){
                     String nombreUsuario = task.getResult().getString("Nombre del usuario");
-
                     nameUsuario.setText(nombreUsuario);
                 } else {
                     Toast.makeText(getContext(), "Error, revisa tu conexion a internet", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
-
 
         //MOSTRAR ALERTA DE DIALOGO
         cardAgendar.setOnClickListener(new View.OnClickListener() {
