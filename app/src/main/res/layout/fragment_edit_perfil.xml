@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPerfil">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_mm13_txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m13_txt3"
+            android:textColor="@color/TextosNegro"
+            android:textSize="@dimen/dimDescripicon"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <EditText
+            android:id="@+id/id_mm13_cjt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/an_cjt_1"
+            android:elevation="15dp"
+            android:ems="10"
+            android:hint="@string/m13_cjt3"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <TextView
+            android:id="@+id/id_mm13_txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m13_txt4"
+            android:textColor="@color/TextosNegro"
+            android:textSize="@dimen/dimDescripicon"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <EditText
+            android:id="@+id/id_mm13_cjt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/an_cjt_1"
+            android:elevation="15dp"
+            android:ems="10"
+            android:hint="@string/m13_cjt4"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <Button
+            android:id="@+id/id_mm13_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/an_btn_1"
+            android:text="@string/m13_btn2"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

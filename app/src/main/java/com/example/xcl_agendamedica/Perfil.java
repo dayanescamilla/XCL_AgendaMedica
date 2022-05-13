@@ -144,8 +144,10 @@ public class Perfil extends Fragment {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Editar_perfil.class);
-                getActivity().startActivity(i);
+                EditPerfil ep = new EditPerfil();
+                ep.show(getParentFragmentManager(),"sada");
+                //Intent i = new Intent(getActivity(), Editar_perfil.class);
+                //getActivity().startActivity(i);
             }
         });
 

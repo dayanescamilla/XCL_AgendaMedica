@@ -14,6 +14,7 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/errorbtn.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/fondo1.xml" value="0.1655" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ic_logo_xolotl.xml" value="0.2095" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ic_logoooooo.xml" value="1.5" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/ic_nav_salir.xml" value="0.2065" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_1.xml" value="0.1655" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/drawable/wave_2.xml" value="0.1655" />
@@ -22,16 +23,17 @@
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_agendar.xml" value="0.2" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_ayuda.xml" value="0.18" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_documentos.xml" value="0.15" />
-        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_editar_perfil.xml" value="0.22" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_editar_perfil.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_encuesta.xml" value="0.18" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_filtro_reguntas.xml" value="0.16" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_login.xml" value="0.18" />
-        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_menu.xml" value="0.14" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_menu_principal.xml" value="0.12" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/activity_modulo_registro.xml" value="0.17" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/alertdialog.xml" value="0.1" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_edit_perfil.xml" value="0.2" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_encuesta_satisfaccion.xml" value="0.1361111111111111" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_fragmento_dashboard.xml" value="0.18" />
         <entry key="..\:/Users/dayan/AndroidStudioProjects/XCL_AgendaMedica/app/src/main/res/layout/fragment_perfil.xml" value="0.15" />
