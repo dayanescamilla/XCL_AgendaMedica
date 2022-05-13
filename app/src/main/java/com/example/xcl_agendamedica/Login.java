@@ -19,9 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
+    //REFERENCIAR DATOS
     Button btnAcceso, btnRegistro;
     EditText correo, contra;
-
+    //BASE DE DATOS
     FirebaseAuth cAuth;
 
     @Override
@@ -29,10 +30,13 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //INSTANCIAR DATOS
+
+        //BASE DE DATOS
         cAuth = FirebaseAuth.getInstance();
-
-
+        //BOTON
         btnAcceso = findViewById(R.id.id_m2_btn1);
+        //EDITTEXT
         correo = findViewById(R.id.id_m2_cj1);
         contra = findViewById(R.id.id_m2_cjt2);
 
@@ -43,6 +47,7 @@ public class Login extends AppCompatActivity {
                 String correoUsuario = correo.getText().toString().trim();
                 String contraUsuario = contra.getText().toString().trim();
 
+                //CONDICION SI CAMPOS ESTAN LLENOS
                 if (correoUsuario.isEmpty() || contraUsuario.isEmpty()){
                     Toast.makeText(Login.this, "Completar campos correo y contraseña", Toast.LENGTH_SHORT).show();
                 }else {
@@ -51,8 +56,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-
-        //LLAMAR A CLASE REGISTRO DESDE CLASE LOGIN
+        //LLAMAR A CLASE REGISTRO DESDE CLASE LOGIN MEDIANTE BOTON
         btnRegistro = findViewById(R.id.id_m2_btn2);
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +67,7 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    //VERIFICAR DATOS DE AUTENTICACION
     private void Acceso(String correoUsuario, String contraUsuario) {
         cAuth.signInWithEmailAndPassword(correoUsuario,contraUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -80,6 +85,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
     //METODO PARA PERMANECER ABIERTA LA SESION
     @Override
     protected void onStart() {
