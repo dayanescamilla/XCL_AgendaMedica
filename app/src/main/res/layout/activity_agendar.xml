@@ -84,7 +84,7 @@
                     android:autofillHints="off"
                     android:background="@drawable/an_btn_5"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textNoSuggestions"
                     android:contentDescription="@string/m5_etxt1"/>
             </LinearLayout>
 
@@ -107,7 +107,7 @@
                     android:layout_height="52dp"
                     android:backgroundTint="@color/white"
                     android:contentDescription="@string/m5_btn4"
-                    android:drawableStart="@drawable/ic_nav_salir" />
+                    android:drawableStart="@drawable/ic_btn_reloj" />
 
                 <EditText
                     android:id="@+id/id_m5_etxt2"
@@ -117,7 +117,7 @@
                     android:autofillHints="off"
                     android:background="@drawable/an_btn_5"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textNoSuggestions"
                     android:contentDescription="@string/m5_etxt2"/>
 
             </LinearLayout>
@@ -154,9 +154,8 @@
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:background="@drawable/an_btn_5"
-
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textNoSuggestions"/>
 
             <TextView
                 android:id="@+id/id_m5_txt5"
@@ -174,7 +173,7 @@
                 android:background="@drawable/an_btn_5"
                 android:contentDescription="@string/m5_etxt5"
                 android:ems="10"
-                android:inputType="textPersonName"/>
+                android:inputType="textNoSuggestions"/>
 
             <TextView
                 android:id="@+id/id_m5_txt6"
