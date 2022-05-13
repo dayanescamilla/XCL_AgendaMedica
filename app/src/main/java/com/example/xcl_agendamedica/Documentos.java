@@ -31,8 +31,10 @@ import java.util.UUID;
 
 public class Documentos extends AppCompatActivity {
 
+    //REFERENCIAR DATOS
     private ImageView imagenUno;
     public Uri imageUr;
+    //BASE DE DATOS
     private FirebaseStorage sFirebase;
     private StorageReference storageReference;
     FirebaseAuth cAuth;
@@ -44,19 +46,22 @@ public class Documentos extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
         this.setTitle("Documentos"); //TITULO MOSTRADO EN ACTION BAR
 
+        //INSTANCIAR DATOS
+
+        //BASE DE DATOS
         sFirebase = FirebaseStorage.getInstance();
         storageReference = sFirebase.getReference();
         cAuth = FirebaseAuth.getInstance();
 
-
+        //IMAGEVIEW
         imagenUno = findViewById(R.id.imageView2);
 
+        //EVENTO ONCLICK A IMAGEVIEW
         imagenUno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 choosePicture();
             }
-
         });
     }
 
@@ -76,6 +81,8 @@ public class Documentos extends AppCompatActivity {
             uploadPicture();
         }
     }
+
+    //FUNCION PARA SUBIR IMAGEN
     private void uploadPicture() {
 
         final ProgressDialog pd = new ProgressDialog(this);
@@ -83,6 +90,7 @@ public class Documentos extends AppCompatActivity {
         pd.setMessage("Se esta subiendo su archivo, espere un momento por favor");
         pd.show();
 
+        //GENERARA UN ID ALEATORIO PARA CADA IMAGEN
         final String randomKey = UUID.randomUUID().toString();
         StorageReference riversRef = storageReference.child("images/" + randomKey);
 
@@ -91,22 +99,14 @@ public class Documentos extends AppCompatActivity {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         pd.dismiss();
-                        Snackbar.make(findViewById(android.R.id.content),"Imagen subida", Snackbar.LENGTH_LONG).setTextColor(Color.WHITE).setBackgroundTint(Color.BLUE).show();
+                        Snackbar.make(findViewById(android.R.id.content),"Se subió con éxito.", Snackbar.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure (@NonNull Exception e){
                     pd.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content),"Error al subir la imagen.", Snackbar.LENGTH_LONG).show();
                 }
         });
     }
-
-   /* public void realtime(View view){
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-
-        myRef.setValue("Hello, World!");
-    }*/
 }
