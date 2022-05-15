@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiCita">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5_">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/id_m14_sub1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_sub1"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_m14_txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Fecha"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_sub2"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_m14_txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Hora"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+                <TextView
+                    android:id="@+id/id_m14_sub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_sub3"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_m14_txt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Nombre completo"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+                <TextView
+                    android:id="@+id/id_m14_sub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_sub4"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/id_m14_txt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_txt4"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+
+
+                <TextView
+                    android:id="@+id/id_m14_sub5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Razon de Cita"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/id_m14_txt5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_txt5"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+
+
+                <TextView
+                    android:id="@+id/id_m14_sub6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Tipo de servicio"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_m14_txt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_txt6"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+                <TextView
+                    android:id="@+id/id_m14_sub7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Tipo de Consulta"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_m14_txt7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/m14_sub7"
+                    android:textColor="@color/TextosNegro"
+                    android:textSize="@dimen/dimSubtitulos" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/view5_"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/wave_2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_m10_tit1_"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="Mi Cita Medica"
+            android:textColor="@color/TextosBlanco"
+            android:textSize="@dimen/dimTitulos"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view5_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view5_"
+            app:layout_constraintVertical_bias="0.26999998" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_begin="200dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

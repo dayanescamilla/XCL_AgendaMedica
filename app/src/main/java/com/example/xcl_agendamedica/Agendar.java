@@ -9,12 +9,16 @@ import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -22,6 +26,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -44,6 +49,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
     FirebaseFirestore cFirestore;
     //BARRA DE CARGA
     ProgressDialog barraCargando;
+    FirebaseUser cUsers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_agendar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BOTON DE RETROCESO DE ACTION BAR
         this.setTitle("Agendar Cita"); //TITULO MOSTRADO EN ACTION BAR
+
 
         //INSTANCIAR DATOS
 
@@ -118,6 +125,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
 
         String id = cAuth.getCurrentUser().getUid();
 
+
         Map<String,Object> citas = new HashMap<>();
         citas.put("Fecha", fecha);
         citas.put("Hora", hora);
@@ -153,6 +161,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onFailure(@NonNull Exception e) {
                 barraCargando.dismiss();
+                //toastMensajeError();
                 Toast.makeText(Agendar.this,"Error al agendar tu cita medica", Toast.LENGTH_SHORT).show();
             }
         });
@@ -168,7 +177,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent cancelarCita = new Intent(Agendar.this,MenuPrincipal.class);
                 startActivity(cancelarCita);
-                Toast.makeText(Agendar.this,"Se cancelo tu cita", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Agendar.this, "Se cancelo cita medica", Toast.LENGTH_SHORT).show();
             }
         });
         alert.setNegativeButton("NO", new DialogInterface.OnClickListener() { //ESTABLECER BOTON NEGATIVO
@@ -179,6 +188,18 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         });
         alert.create().show(); //MOSTRAR ALERTA
     }
+
+   /* private void toastMensajeError() {
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.toast_uno,(ViewGroup) findViewById(R.id.toast_error));
+
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.BOTTOM,0, 200);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(view);
+        toast.show();
+    }*/
 
     //FUNCION PARA AGREGAR FECHA MEDIANTE DATAPICKERDIALOG
     @Override

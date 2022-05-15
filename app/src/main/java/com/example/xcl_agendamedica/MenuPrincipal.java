@@ -42,7 +42,7 @@ public class MenuPrincipal extends AppCompatActivity {
                             break;
 
                         case R.id.id_ic_nav_encuesta:
-                            selectedFragment = new EncuestaSatisfaccion();
+                            selectedFragment = new MiCita();
                             break;
 
                         case R.id.id_ic_nav_salir:

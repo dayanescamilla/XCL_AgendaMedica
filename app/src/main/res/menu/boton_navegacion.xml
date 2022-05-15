@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/id_ic_nav_encuesta"
-        android:icon="@drawable/ic_nav_encuesta"
+        android:icon="@drawable/ic_nav_cita"
         android:title="@string/m11_tit2"/>
 
     <item

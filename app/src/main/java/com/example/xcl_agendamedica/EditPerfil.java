@@ -1,7 +1,7 @@
 package com.example.xcl_agendamedica;
 
+import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class EditPerfil extends DialogFragment {
 
-    Button guardar;
+    Button guardar, btnDocumento;
     EditText tel, telemer;
     FirebaseAuth cAuth;
     FirebaseFirestore cFirestore;
@@ -44,12 +44,16 @@ public class EditPerfil extends DialogFragment {
         guardar = vista.findViewById(R.id.id_mm13_btn);
         tel = vista.findViewById(R.id.id_mm13_cjt3);
         telemer = vista.findViewById(R.id.id_mm13_cjt4);
+        btnDocumento = vista.findViewById(R.id.id_mm13_btn1);
 
         //firebase
         cFirestore = FirebaseFirestore.getInstance();
         cAuth = FirebaseAuth.getInstance();
         // recuperar id de usuario
         //idUser = cAuth.getCurrentUser().getUid();
+
+
+
 
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +68,17 @@ public class EditPerfil extends DialogFragment {
                 }
             }
         });
+
+        btnDocumento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Documentos.class);
+                getActivity().startActivity(i);
+            }
+        });
+
         return vista;
+
     }
 
    private void Registro(String telefono, String emergencia) {

@@ -134,7 +134,7 @@
 
     <!-- 11. Boton de navegacion-->
     <string name="m11_tit1">Menú</string>
-    <string name="m11_tit2">Encuesta</string>
+    <string name="m11_tit2">Cita</string>
     <string name="m11_tit3">Perfil</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -174,6 +174,22 @@
     <string name="m13_btn1">Subir documentos</string>
     <string name="m13_btn2">Guardar cambios</string>
     <string name="m13_btn3">Cambiar foto de perfil</string>
+
+    <!-- 14. Fragment Perfil de usuario -->
+    <string name="m14_sub1">La fecha de tu cita medica es:</string>
+    <string name="m14_txt1">Fecha</string>
+    <string name="m14_sub2">En un horario de:</string>
+    <string name="m14_txt2">Hora</string>
+    <string name="m14_sub3">Con nombre de paciente:</string>
+    <string name="m14_txt3">Nombre</string>
+    <string name="m14_sub4">Edad:</string>
+    <string name="m14_txt4">Edad</string>
+    <string name="m14_sub5">Razon por la cual agenda la cita:</string>
+    <string name="m14_txt5">Razon</string>
+    <string name="m14_sub6">Tipo de servicio que solicita:</string>
+    <string name="m14_txt6">Servicio</string>
+    <string name="m14_sub7">Tipo de consulta:</string>
+    <string name="m14_txt7">Consulta</string>
 
 
     <!-- Content Description -->
