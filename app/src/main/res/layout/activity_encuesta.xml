@@ -35,22 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024" />
 
-    <Button
-        android:id="@+id/id_m10_btn1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/an_btn_1"
-        android:text="@string/m10_btn1"
-        android:textColor="@color/TextosBlanco"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -86,6 +71,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1" />
 
             <RadioGroup
+                android:id="@+id/radiogroup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -165,6 +151,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1" />
 
             <RadioGroup
+                android:id="@+id/radiogroup2"
                 android:layout_width="132dp"
                 android:layout_height="111dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -212,6 +199,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1" />
 
             <RadioGroup
+                android:id="@+id/radiogroup3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -280,6 +268,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1" />
 
             <RadioGroup
+                android:id="@+id/radiogroup4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -328,6 +317,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/id_m10_tit1" />
 
             <RadioGroup
+                android:id="@+id/radiogroup5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -362,5 +352,22 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/id_m10_btn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/an_btn_1"
+        android:text="@string/m10_btn1"
+        android:textColor="@color/TextosBlanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

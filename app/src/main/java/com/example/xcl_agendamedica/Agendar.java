@@ -149,6 +149,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
         }
 
         //AGREGAR A COLLECION DE BASE DE DATOS FIREBASE MEDIANTE ID DEL USUARIO
+
         cFirestore.collection("Cita Medica").document(id).set(citas).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

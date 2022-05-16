@@ -38,7 +38,7 @@ public class Dashboard extends Fragment {
 
     //VIEWFLIPPER, CARDVIEW, VIEW, TEXTVIEW
     ViewFlipper vflipper;
-    CardView cardAgendar,cardAcerca,cardAyuda;
+    CardView cardAgendar,cardAcerca,cardAyuda, cardEncuesta;
     View vista;
     TextView nameUsuario;
     //BASE DE DATOS
@@ -91,12 +91,13 @@ public class Dashboard extends Fragment {
         //INSTANCIAR DATOS
 
         //IMAGEVIEW
-        int images[] = {R.drawable.b1, R.drawable.b2, R.drawable.b3};
+        int images[] = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3};
         vflipper = vista.findViewById(R.id.v_flipper);
         //CARDVIEW
         cardAgendar = vista.findViewById(R.id.cardViewAgendar);
         cardAcerca = vista.findViewById(R.id.cardViewAcerca);
         cardAyuda = vista.findViewById(R.id.cardViewAyuda);
+        cardEncuesta = vista.findViewById(R.id.cardViewEncuesta);
         //TEXTOS
         nameUsuario = vista.findViewById(R.id.id_m4_sub2);
         //BASE DE DATOS
@@ -149,8 +150,8 @@ public class Dashboard extends Fragment {
         cardAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Acerca.class);
-                getActivity().startActivity(i);
+                Intent cdAcerca = new Intent(getActivity(), Acerca.class);
+                getActivity().startActivity(cdAcerca);
             }
         });
 
@@ -158,10 +159,20 @@ public class Dashboard extends Fragment {
         cardAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Ayuda.class);
-                getActivity().startActivity(i);
+                Intent cdAyuda = new Intent(getActivity(), Ayuda.class);
+                getActivity().startActivity(cdAyuda);
             }
         });
+
+        //DIRIGIRSE A MODULO ENUCESTA DE SATISFACCION
+        cardEncuesta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cdEncuesta = new Intent(getActivity(), encuesta.class);
+                getActivity().startActivity(cdEncuesta);
+            }
+        });
+
 
         //SENTENTICA DE VALIDACION CARRUSEL
         for (int image : images) {

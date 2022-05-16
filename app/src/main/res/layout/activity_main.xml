@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/an_btn_2"
+        android:background="@drawable/an_btn_1"
         android:text="@string/m1_btn1"
         android:textColor="@color/TextosBlanco"
         android:layout_marginBottom="24dp"

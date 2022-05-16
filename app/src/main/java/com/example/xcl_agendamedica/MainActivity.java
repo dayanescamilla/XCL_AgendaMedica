@@ -7,16 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class MainActivity extends AppCompatActivity {
 
     //REFERENICAR DATOS
     Button id_m1_btn1;
+
+    FirebaseAuth cAuth;
+    FirebaseFirestore cFirestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_XCL_AgendaMedica);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        cFirestore = FirebaseFirestore.getInstance();
+        cAuth = FirebaseAuth.getInstance();
 
         //INSTANCIAR DATOS
 

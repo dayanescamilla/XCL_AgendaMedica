@@ -35,7 +35,7 @@ import java.util.prefs.PreferenceChangeEvent;
 
 public class EncuestaSatisfaccion extends Fragment {
 
-    Button btnenviar;
+   Button btnenviar;
     RadioButton Rd1, Rd2, Rd3, Rd4, Rd5, Rd6, Rd7, Rd8, Rd9, Rd10, Rd11, Rd12, Rd13, Rd14, Rd15;
     RadioGroup Rdg1, Rdg2, Rdg3, Rdg4, Rdg5;
     View vista;
@@ -66,7 +66,7 @@ public class EncuestaSatisfaccion extends Fragment {
         //barra de cargado
         barraCargando = new ProgressDialog(getContext());
 
-        btnenviar = vista.findViewById(R.id.id_an_btn_1);
+        
 
         //radiobuttons
         Rd1 = vista.findViewById(R.id.radioButton);
@@ -193,5 +193,4 @@ public class EncuestaSatisfaccion extends Fragment {
         });
 
     }
-
 }
