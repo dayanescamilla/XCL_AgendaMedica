@@ -110,11 +110,11 @@
 
     <!-- 10. Modulo encuesta de satisfaccion -->
     <string name="m10_tit1">Encuesta de satisfacción al usuario</string>
-    <string name="m10_txt1">1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?</string>
+    <string name="m10_txt1">1.-En general ¿cómo calificaría la calidad y su experiencia con el servicio mediante la aplicación?</string>
     <string name="m10_txt2">2.-¿Tuviste problemas al agendar una cita?</string>
     <string name="m10_txt3">3.-¿Cómo te parecio la consulta virtual?</string>
-    <string name="m10_txt4">4.-¿Volverias agendar tu cita por medio de la aplicación?</string>
-    <string name="m10_txt5">5.-¿Recomendarias esta aplicación a tus conocidos?</string>
+    <string name="m10_txt4">4.-¿Volverías agendar tu cita por medio de la aplicación?</string>
+    <string name="m10_txt5">5.-¿Recomendarías esta aplicación a tus conocidos?</string>
     <string name="m10_rd1">Muy positiva</string>
     <string name="m10_rd2">Positiva</string>
     <string name="m10_rd3">Neutral</string>
