@@ -87,7 +87,7 @@ public class Documentos extends AppCompatActivity {
 
         final ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("Subiendo");
-        pd.setMessage("Se esta subiendo su archivo, espere un momento por favor");
+        pd.setMessage("Se está subiendo su archivo, espere un momento por favor");
         pd.show();
 
         //GENERARA UN ID ALEATORIO PARA CADA IMAGEN

@@ -181,7 +181,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:gravity="center"
-            android:text="Mi Cita Medica"
+            android:text="Mi Cita Médica"
             android:textColor="@color/TextosBlanco"
             android:textSize="@dimen/dimTitulos"
             android:textStyle="bold"

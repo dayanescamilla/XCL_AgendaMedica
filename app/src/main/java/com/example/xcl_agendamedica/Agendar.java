@@ -120,7 +120,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
     private void agendarCita(String fecha, String hora, String nombre, String edad, String razon, String presencial, String virtual, String pareja, String individual, String familiar) {
         //PREOGRESS DIALOG
         barraCargando.setTitle("Cargando");
-        barraCargando.setMessage("Tu cita esta siendo procesada");
+        barraCargando.setMessage("Tu cita está siendo procesada");
         barraCargando.show();
 
         String id = cAuth.getCurrentUser().getUid();
@@ -163,7 +163,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
             public void onFailure(@NonNull Exception e) {
                 barraCargando.dismiss();
                 //toastMensajeError();
-                Toast.makeText(Agendar.this,"Error al agendar tu cita medica", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Agendar.this,"Error al agendar tu cita médica", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -172,13 +172,13 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
     public void showAlertDialog(View view){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Cancelar Cita");
-        alert.setMessage("¿Estas seguro que deseas cancelar tu cita medica?");
+        alert.setMessage("¿Estás seguro que deseas cancelar tu cita médica?");
         alert.setPositiveButton("SI", new DialogInterface.OnClickListener() { //ESTABLECER BOTON POSITIVO
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent cancelarCita = new Intent(Agendar.this,MenuPrincipal.class);
                 startActivity(cancelarCita);
-                Toast.makeText(Agendar.this, "Se cancelo cita medica", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Agendar.this, "Se cancelo cita médica", Toast.LENGTH_SHORT).show();
             }
         });
         alert.setNegativeButton("NO", new DialogInterface.OnClickListener() { //ESTABLECER BOTON NEGATIVO

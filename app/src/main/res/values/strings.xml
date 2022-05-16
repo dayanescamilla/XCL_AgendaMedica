@@ -176,7 +176,7 @@
     <string name="m13_btn3">Cambiar foto de perfil</string>
 
     <!-- 14. Fragment Perfil de usuario -->
-    <string name="m14_sub1">La fecha de tu cita medica es:</string>
+    <string name="m14_sub1">La fecha de tu cita médica es:</string>
     <string name="m14_txt1">Fecha</string>
     <string name="m14_sub2">En un horario de:</string>
     <string name="m14_txt2">Hora</string>
@@ -184,8 +184,8 @@
     <string name="m14_txt3">Nombre</string>
     <string name="m14_sub4">Edad:</string>
     <string name="m14_txt4">Edad</string>
-    <string name="m14_sub5">Razon por la cual agenda la cita:</string>
-    <string name="m14_txt5">Razon</string>
+    <string name="m14_sub5">Razón por la cual agenda la cita:</string>
+    <string name="m14_txt5">Razón</string>
     <string name="m14_sub6">Tipo de servicio que solicita:</string>
     <string name="m14_txt6">Servicio</string>
     <string name="m14_sub7">Tipo de consulta:</string>

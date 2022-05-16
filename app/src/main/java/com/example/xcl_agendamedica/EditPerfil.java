@@ -87,14 +87,14 @@ public class EditPerfil extends DialogFragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 String id = cAuth.getCurrentUser().getUid();
                 Map<String,Object> Map2 = new HashMap<>();
-                Map2.put("Telefono", telefono);
-                Map2.put("Telefono de emergencia", emergencia);
+                Map2.put("Teléfono", telefono);
+                Map2.put("Teléfono de emergencia", emergencia);
 
 
-                cFirestore.collection("Informacion").document(id).set(Map2).addOnSuccessListener(new OnSuccessListener<Void>() {
+                cFirestore.collection("Información").document(id).set(Map2).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(getContext(), "Se registro con exito", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Se registro con éxito", Toast.LENGTH_SHORT).show();
                         getDialog().dismiss();
                     }
                 }).addOnFailureListener(new OnFailureListener() {

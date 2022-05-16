@@ -114,7 +114,7 @@ public class Dashboard extends Fragment {
                     String nombreUsuario = task.getResult().getString("Nombre del usuario");
                     nameUsuario.setText(nombreUsuario);
                 } else {
-                    Toast.makeText(getContext(), "Error, revisa tu conexion a internet", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Error, revisa tu conexión a internet", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -125,7 +125,7 @@ public class Dashboard extends Fragment {
             public void onClick(View view) {
                 AlertDialog.Builder alertAgendar = new AlertDialog.Builder(getContext());
                 alertAgendar.setTitle("Filtro de Preguntas");
-                alertAgendar.setMessage("Para poder agendar una cita medica se necesita responder un cuestionario muy simple.");
+                alertAgendar.setMessage("Para poder agendar una cita médica se necesita responder un cuestionario muy simple.");
                 //METODO DE ACCION POSITIVA
                 alertAgendar.setPositiveButton("ENTENDIDO", new DialogInterface.OnClickListener() {
                     @Override

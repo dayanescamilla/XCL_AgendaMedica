@@ -121,25 +121,25 @@ public class EncuestaSatisfaccion extends Fragment {
     private void Encuesta(String opc1, String opc2, String opc3, String opc4, String opc5, String opc6, String opc7, String opc8, String opc9, String opc10, String opc11, String opc12, String opc13, String opc14, String opc15) {
 
         barraCargando.setTitle("Cargando");
-        barraCargando.setMessage("Tu encuesta esta siedo procesada");
+        barraCargando.setMessage("Tu encuesta está siendo procesada");
         barraCargando.show();
 
         String id = cAuth.getCurrentUser().getUid();
         Map<String,Object> Encuesta = new HashMap<>();
 
         if (Rdg1.getCheckedRadioButtonId() == R.id.radioButton){
-            Encuesta.put("1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?", opc1);
+            Encuesta.put("1.-En general ¿cómo calificaria la calidad y su experiencia con el servicio mediante la aplicación?", opc1);
         } else
         if (Rdg1.getCheckedRadioButtonId() == R.id.radioButton2){
-            Encuesta.put("1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?",opc2);
+            Encuesta.put("1.-En general ¿cómo calificaria la calidad y su experiencia con el servicio mediante la aplicación?",opc2);
         } else
         if (Rdg1.getCheckedRadioButtonId() == R.id.radioButton3){
-            Encuesta.put("1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?",opc3);
+            Encuesta.put("1.-En general ¿cómo calificaria la calidad y su experiencia con el servicio mediante la aplicación?",opc3);
         }else
         if (Rdg1.getCheckedRadioButtonId() == R.id.radioButton4){
-            Encuesta.put("1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?",opc4);
+            Encuesta.put("1.-En general ¿cómo calificaria la calidad y su experiencia con el servicio mediante la aplicación?",opc4);
         }else {
-            Encuesta.put("1.-En general ¿cómo calificalificaría la calidad y su experiencia con el servicio mediente la aplicación?", opc5);
+            Encuesta.put("1.-En general ¿cómo calificaria la calidad y su experiencia con el servicio mediante la aplicación?", opc5);
         }
 
         if (Rdg2.getCheckedRadioButtonId() == R.id.radioButton6){
@@ -150,16 +150,16 @@ public class EncuestaSatisfaccion extends Fragment {
         }
 
         if (Rdg3.getCheckedRadioButtonId() == R.id.radioButton8){
-            Encuesta.put("3.-¿Cómo te parecio la consulta virtual?", opc8);
+            Encuesta.put("3.-¿Cómo te pareció la consulta virtual?", opc8);
         } else
         if (Rdg3.getCheckedRadioButtonId() == R.id.radioButton9){
-            Encuesta.put("3.-¿Cómo te parecio la consulta virtual?",opc9);
+            Encuesta.put("3.-¿Cómo te pareció la consulta virtual?",opc9);
         } else
         if (Rdg3.getCheckedRadioButtonId() == R.id.radioButton10){
-            Encuesta.put("3.-¿Cómo te parecio la consulta virtual?",opc10);
+            Encuesta.put("3.-¿Cómo te pareció la consulta virtual?",opc10);
         }
         else {
-            Encuesta.put("3.-¿Cómo te parecio la consulta virtual?", opc11);
+            Encuesta.put("3.-¿Cómo te pareció la consulta virtual?", opc11);
         }
 
         if (Rdg4.getCheckedRadioButtonId() == R.id.radioButton12){
@@ -170,19 +170,17 @@ public class EncuestaSatisfaccion extends Fragment {
         }
 
         if (Rdg5.getCheckedRadioButtonId() == R.id.radioButton14){
-            Encuesta.put("5.-¿Recomendarias esta aplicación a tus conocidos?", opc14);
+            Encuesta.put("5.-¿Recomendarías esta aplicación a tus conocidos?", opc14);
         }
         else {
-            Encuesta.put("5.-¿Recomendarias esta aplicación a tus conocidos?", opc15);
+            Encuesta.put("5.-¿Recomendarías esta aplicación a tus conocidos?", opc15);
         }
-
-
 
         cFirestore.collection("Encuesta de satisfacción").document(id).set(Encuesta).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 barraCargando.dismiss();
-                Toast.makeText(getContext(), "Se registro con exito tu encuesta", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Se registró con éxito tu encuesta", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
