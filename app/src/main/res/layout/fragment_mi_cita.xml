@@ -34,8 +34,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_sub1"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
                     android:id="@+id/id_m14_txt1"
@@ -44,7 +43,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="Fecha"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
@@ -55,8 +53,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_sub2"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
                     android:id="@+id/id_m14_txt2"
@@ -65,7 +62,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="Hora"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
@@ -76,8 +72,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_sub3"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
                     android:id="@+id/id_m14_txt3"
@@ -86,7 +81,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="Nombre completo"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
@@ -97,8 +91,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_sub4"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
                 <TextView
                     android:id="@+id/id_m14_txt4"
                     android:layout_width="match_parent"
@@ -106,7 +99,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_txt4"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
 
@@ -119,8 +111,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="Razon de Cita"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
                 <TextView
                     android:id="@+id/id_m14_txt5"
                     android:layout_width="match_parent"
@@ -128,7 +119,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_txt5"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
 
@@ -141,8 +131,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="Tipo de servicio"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
                     android:id="@+id/id_m14_txt6"
@@ -151,7 +140,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_txt6"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
@@ -162,8 +150,7 @@
                     android:layout_marginEnd="24dp"
                     android:text="Tipo de Consulta"
                     android:textColor="@color/TextosNegro"
-                    android:textSize="@dimen/dimSubtitulos"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/dimSubtitulos" />
 
                 <TextView
                     android:id="@+id/id_m14_txt7"
@@ -172,7 +159,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="@string/m14_sub7"
-                    android:textColor="@color/TextosNegro"
                     android:textSize="@dimen/dimSubtitulos" />
 
             </LinearLayout>
