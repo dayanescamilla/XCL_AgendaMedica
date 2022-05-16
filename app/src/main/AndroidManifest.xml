@@ -10,65 +10,68 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XCL_AgendaMedica">
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".Editar_perfil"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".MenuPrincipal"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".filtro_reguntas"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Ayuda"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".menu"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Documentos"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Acerca"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".encuesta"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".modulo_registro"
             android:exported="false"
             android:parentActivityName=".MenuPrincipal"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".Agendar"
             android:exported="false"
-            android:theme="@style/Theme.XCL_AgendaMedica2"
             android:parentActivityName=".MenuPrincipal"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.XCL_AgendaMedica2" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Login"
+            android:name=".PantallaBienvenida"
             android:exported="true"> <!-- Desactivar Rotacion de pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
