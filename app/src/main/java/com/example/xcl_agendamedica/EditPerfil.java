@@ -107,7 +107,6 @@ public class EditPerfil extends DialogFragment {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
             }
         });
     }
