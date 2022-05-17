@@ -158,6 +158,7 @@ public class Perfil extends Fragment {
                 Toast.makeText(getActivity(),"Se cerro Sesion con exito", Toast.LENGTH_SHORT).show();
                 Intent i2 = new Intent(getActivity(), Login.class);
                 getActivity().startActivity(i2);
+                getActivity().onBackPressed();
             }
         });
 

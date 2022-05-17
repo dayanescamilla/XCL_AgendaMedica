@@ -46,6 +46,7 @@ public class filtro_reguntas extends AppCompatActivity {
                 if (noUno.isChecked() && noDos.isChecked() && (noTres.isChecked() || siTres.isChecked())  && noCuatro.isChecked()){  //VERIFICAR LAS CASILLAS
                     Intent enviardatos = new Intent(filtro_reguntas.this,Agendar.class);
                     startActivity(enviardatos);
+                    finish();
                 }else {
                     showAlertDialog();
                 }

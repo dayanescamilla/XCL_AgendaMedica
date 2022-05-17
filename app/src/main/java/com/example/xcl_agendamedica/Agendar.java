@@ -156,6 +156,7 @@ public class Agendar extends AppCompatActivity implements View.OnClickListener {
                 barraCargando.dismiss();
                 Intent citaAgregada = new Intent(Agendar.this,MenuPrincipal.class);
                 startActivity(citaAgregada);
+                finish();
                 Toast.makeText(Agendar.this,"Se agregó tu cita médica con éxito.", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {

@@ -32,6 +32,7 @@ public class PantallaBienvenida extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(getApplicationContext(),Login.class);
                 startActivity(i);
+                finish();
                 overridePendingTransition(R.anim.desvanecidodos, R.anim.desvanecido);
             }
         },5000);
