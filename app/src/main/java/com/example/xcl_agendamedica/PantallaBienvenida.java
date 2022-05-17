@@ -23,6 +23,7 @@ public class PantallaBienvenida extends AppCompatActivity {
         textoBienvenida = findViewById(R.id.txtBienvenido);
         textSub = findViewById(R.id.textViewSub);
 
+
         lottieTime.animate().translationY(0).setDuration(4500).setStartDelay(0);
         //textoBienvenida.animate().translationX(300).setDuration(3000).setStartDelay(0);
 
