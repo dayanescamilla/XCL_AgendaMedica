@@ -129,12 +129,12 @@ public class Perfil extends Fragment {
         });
 
 
-        documentReference1 = cFirestore.collection("Informacion").document(ID);
+        documentReference1 = cFirestore.collection("Información").document(ID);
         documentReference1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                    String telefonoUsuario = task.getResult().getString("Telefono");
-                    String emergenciaUsuario = task.getResult().getString("Telefono de emergencia");
+                    String telefonoUsuario = task.getResult().getString("Teléfono");
+                    String emergenciaUsuario = task.getResult().getString("Teléfono de emergencia");
 
                     usertelefono.setText(telefonoUsuario);
                     useremergencia.setText(emergenciaUsuario);
