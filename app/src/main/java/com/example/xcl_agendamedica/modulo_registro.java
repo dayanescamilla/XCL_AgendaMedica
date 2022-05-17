@@ -104,6 +104,7 @@ public class modulo_registro extends AppCompatActivity {
                 @Override
                 public void onSuccess(Void unused) {
                     barraCargando.dismiss();
+                    finish();
                     Intent usuarioReg = new Intent(modulo_registro.this,MenuPrincipal.class);
                     startActivity(usuarioReg);
                     Toast.makeText(modulo_registro.this, "Se registro con exito", Toast.LENGTH_SHORT).show();
