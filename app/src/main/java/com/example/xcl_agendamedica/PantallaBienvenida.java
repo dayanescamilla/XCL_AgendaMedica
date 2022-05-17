@@ -23,6 +23,7 @@ public class PantallaBienvenida extends AppCompatActivity {
         textoBienvenida = findViewById(R.id.txtBienvenido);
         textSub = findViewById(R.id.textViewSub);
 
+
         lottieTime.animate().translationY(0).setDuration(4500).setStartDelay(0);
         //textoBienvenida.animate().translationX(300).setDuration(3000).setStartDelay(0);
 
@@ -32,6 +33,7 @@ public class PantallaBienvenida extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(getApplicationContext(),Login.class);
                 startActivity(i);
+                finish();
                 overridePendingTransition(R.anim.desvanecidodos, R.anim.desvanecido);
             }
         },5000);
